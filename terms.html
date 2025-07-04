@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishRedo Terms & Conditions — Flip the Recipe. Remix the Rules.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration for DishRedo Colors */
+        :root {
+            --color-zesty-orange: #FF7043;
+            --color-slate-black: #212121;
+            --color-cream-white: #FAFAFA;
+            --color-basil-green: #81C784;
+            --color-electric-yellow: #FFEB3B;
+        }
+
+        .bg-zesty-orange { background-color: var(--color-zesty-orange); }
+        .text-zesty-orange { color: var(--color-zesty-orange); }
+        .hover\:bg-zesty-orange-dark:hover { background-color: #E65C34; } /* Slightly darker for hover */
+
+        .bg-slate-black { background-color: var(--color-slate-black); }
+        .text-slate-black { color: var(--color-slate-black); }
+
+        .bg-cream-white { background-color: var(--color-cream-white); }
+        .text-cream-white { color: var(--color-cream-white); }
+
+        .bg-basil-green { background-color: var(--color-basil-green); }
+        .text-basil-green { color: var(--color-basil-green); }
+
+        .bg-electric-yellow { background-color: var(--color-electric-yellow); }
+        .text-electric-yellow { color: var(--color-electric-yellow); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-slate-black);
+            color: var(--color-cream-white);
+        }
+
+        /* Custom button styles for DishRedo */
+        .btn-primary {
+            @apply bg-zesty-orange text-cream-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange-dark transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-zesty-orange text-zesty-orange font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange hover:text-cream-white;
+        }
+
+        /* Custom card styles */
+        .card {
+            @apply bg-cream-white text-slate-black p-6 rounded-lg shadow-xl;
+        }
+
+        /* Terms and Conditions specific styles */
+        .terms-point {
+            @apply mb-8 p-6 rounded-lg shadow-md bg-slate-black text-cream-white;
+        }
+        .terms-point h3 {
+            @apply text-xl font-semibold text-zesty-orange mb-3;
+        }
+        .terms-point p {
+            @apply text-gray-300 text-base leading-relaxed;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-slate-black py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-3xl font-extrabold text-zesty-orange">DishRedo<span class="text-cream-white">.</span></a>
+            <nav>
+                <ul class="flex space-x-6">
+                      <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- Terms & Conditions Hero Section -->
+        <section class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">Terms & Conditions:</span> Your Guide to DishRedo.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    Welcome to DishRedo! These Terms and Conditions outline the rules and regulations for the use of DishRedo's website and services. By accessing this website, we assume you accept these terms and conditions. Do not continue to use DishRedo if you do not agree to all of the terms and conditions stated on this page.
+                </p>
+                <a href="#terms-details" class="btn-primary">Read Full Terms</a>
+            </div>
+        </section>
+
+        <!-- Terms & Conditions Details Section -->
+        <section id="terms-details" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">DishRedo Terms and Conditions Details</h2>
+            <p class="text-lg text-gray-700 mb-12">
+                These Terms and Conditions ("Terms") govern your access to and use of the DishRedo website, mobile applications, and all related services, content, and products (collectively, the "Services") provided by DishRedo ("we," "us," or "our"). By accessing or using any part of the Services, you agree to be bound by these Terms. If you do not agree to all the terms and conditions of this agreement, then you may not access the Services. These Terms constitute the entire agreement between you and DishRedo regarding your use of the Services. We reserve the right to update, change, or replace any part of these Terms by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.
+            </p>
+
+            <div class="space-y-8">
+                <!-- Point 1 -->
+                <div class="terms-point">
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>
+                        By accessing and using the DishRedo Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy. These terms apply to all visitors, users, and others who access or use the Service. Your agreement to these terms is a prerequisite for using any of our features, including browsing recipes, utilizing interactive tools, or engaging with our community. If you do not agree, you must discontinue use immediately.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="terms-point">
+                    <h3>2. User Accounts and Registration</h3>
+                    <p>
+                        To access certain features of the Services, such as saving recipes or participating in community forums, you may be required to create an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. You are responsible for safeguarding your password and for any activities or actions under your account. DishRedo cannot and will not be liable for any loss or damage arising from your failure to comply with these obligations.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="terms-point">
+                    <h3>3. Content Ownership and Intellectual Property</h3>
+                    <p>
+                        All content on DishRedo, including text, graphics, logos, images, recipe data, interactive tools, and software, is the property of DishRedo or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Service without our prior written consent. Unauthorized use may lead to legal action.
+                    </p>
+                </div>
+                <!-- Point 4 -->
+                <div class="terms-point">
+                    <h3>4. User-Generated Content: Rights and Responsibilities</h3>
+                    <p>
+                        Users may submit, post, or display content, including recipes, photos, comments, and reviews ("User Content"). You retain all rights in, and are solely responsible for, the User Content you post to DishRedo. By posting User Content, you grant DishRedo a non-exclusive, royalty-free, worldwide, transferable license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content in connection with the Services. You warrant that your User Content does not infringe any third-party rights.
+                    </p>
+                </div>
+                <!-- Point 5 -->
+                <div class="terms-point">
+                    <h3>5. Prohibited Uses and Conduct</h3>
+                    <p>
+                        You agree not to use the Services for any unlawful purpose or in any way that could damage, disable, overburden, or impair the Service or interfere with any other party's use and enjoyment of the Service. Prohibited conduct includes, but is not limited to, posting hateful, offensive, or discriminatory content, engaging in spamming, attempting to gain unauthorized access to our systems, or distributing malware. Violation of these terms may result in immediate termination of your account and legal action.
+                    </p>
+                </div>
+                <!-- Point 6 -->
+                <div class="terms-point">
+                    <h3>6. Disclaimer of Warranties</h3>
+                    <p>
+                        The Services are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance. DishRedo does not warrant that the Services will be uninterrupted, secure, or error-free, that defects will be corrected, or that the Services or the servers that make them available are free of viruses or other harmful components. Your use of the Services is at your sole risk.
+                    </p>
+                </div>
+                <!-- Point 7 -->
+                <div class="terms-point">
+                    <h3>7. Limitation of Liability</h3>
+                    <p>
+                        In no event shall DishRedo, its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use, or alteration of your transmissions or content. This limitation applies even if DishRedo has been advised of the possibility of such damages.
+                    </p>
+                </div>
+                <!-- Point 8 -->
+                <div class="terms-point">
+                    <h3>8. Indemnification</h3>
+                    <p>
+                        You agree to defend, indemnify, and hold harmless DishRedo and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password; b) a breach of these Terms; or c) User Content posted on the Service. This ensures protection for DishRedo against user-related liabilities.
+                    </p>
+                </div>
+                <!-- Point 9 -->
+                <div class="terms-point">
+                    <h3>9. Termination of Accounts</h3>
+                    <p>
+                        We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service or contact us for account deletion. All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+                    </p>
+                </div>
+                <!-- Point 10 -->
+                <div class="terms-point">
+                    <h3>10. Links to Other Websites</h3>
+                    <p>
+                        Our Service may contain links to third-party web sites or services that are not owned or controlled by DishRedo. DishRedo has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services. You further acknowledge and agree that DishRedo shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.
+                    </p>
+                </div>
+                <!-- Point 11 -->
+                <div class="terms-point">
+                    <h3>11. Governing Law</h3>
+                    <p>
+                        These Terms shall be governed and construed in accordance with the laws of [Your Jurisdiction, e.g., the State of California, USA], without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.
+                    </p>
+                </div>
+                <!-- Point 12 -->
+                <div class="terms-point">
+                    <h3>12. Changes to Terms and Conditions</h3>
+                    <p>
+                        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.
+                    </p>
+                </div>
+                <!-- Point 13 -->
+                <div class="terms-point">
+                    <h3>13. Eligibility and Age Restrictions</h3>
+                    <p>
+                        By using the Services, you represent and warrant that you are at least 13 years of age. If you are under 13, you may not use the Services. If you are between 13 and 18, you may use the Services only with the involvement of a parent or guardian. We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take steps to delete such information.
+                    </p>
+                </div>
+                <!-- Point 14 -->
+                <div class="terms-point">
+                    <h3>14. Accuracy of Information</h3>
+                    <p>
+                        While we strive to provide accurate and up-to-date information on DishRedo, we do not warrant the completeness, reliability, or accuracy of any content, including recipes, nutritional information, or dietary advice. The information provided is for general guidance only and should not be relied upon as the sole basis for making decisions without consulting primary, more accurate, complete, or timelier sources of information. Any reliance on the material on this site is at your own risk.
+                    </p>
+                </div>
+                <!-- Point 15 -->
+                <div class="terms-point">
+                    <h3>15. Recipe Outcomes and Safety</h3>
+                    <p>
+                        Recipes and culinary advice provided on DishRedo are for informational purposes only. We do not guarantee specific outcomes or results from following any recipe. Users are solely responsible for exercising proper food safety, hygiene, and cooking practices. This includes verifying ingredients for allergens, cooking to safe temperatures, and handling sharp objects or hot surfaces with care. DishRedo is not liable for any adverse effects or injuries resulting from the preparation or consumption of food based on our content.
+                    </p>
+                </div>
+                <!-- Point 16 -->
+                <div class="terms-point">
+                    <h3>16. Digital Products and Downloads</h3>
+                    <p>
+                        If DishRedo offers digital products or downloadable content (e.g., e-books), these are provided "as is" without warranty of any kind. Once purchased or downloaded, all sales are final, and no refunds will be issued unless otherwise stated in a specific product's terms. You are granted a limited, non-exclusive, non-transferable license to use the digital products for personal, non-commercial purposes only. Redistribution or resale is strictly prohibited.
+                    </p>
+                </div>
+                <!-- Point 17 -->
+                <div class="terms-point">
+                    <h3>17. Marketplace and Third-Party Products</h3>
+                    <p>
+                        Our Marketplace may feature products or services from third-party vendors. DishRedo acts as a platform facilitating these transactions but does not manufacture, endorse, or assume responsibility for the quality, safety, or legality of these third-party products. Any purchase made through the Marketplace is subject to the terms and conditions of the respective third-party vendor. We encourage users to review those terms before making a purchase.
+                    </p>
+                </div>
+                <!-- Point 18 -->
+                <div class="terms-point">
+                    <h3>18. Promotions and Contests</h3>
+                    <p>
+                        Any contests, sweepstakes, or other promotions (collectively, "Promotions") made available through the Service may be governed by rules that are separate from these Terms. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply. DishRedo reserves the right to modify or cancel any promotion at its discretion.
+                    </p>
+                </div>
+                <!-- Point 19 -->
+                <div class="terms-point">
+                    <h3>19. Feedback and Suggestions</h3>
+                    <p>
+                        Any feedback, comments, ideas, improvements, or suggestions (collectively, "Suggestions") provided by you to DishRedo with respect to the Service shall remain the sole property of DishRedo. We shall be free to use, copy, modify, publish, or redistribute the Suggestions for any purpose and in any way without any credit or any compensation to you. By submitting Suggestions, you waive any rights you may have to them.
+                    </p>
+                </div>
+                <!-- Point 20 -->
+                <div class="terms-point">
+                    <h3>20. Severability</h3>
+                    <p>
+                        If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions of these Terms will remain in full force and effect. The invalid or unenforceable provision will be replaced by a valid and enforceable provision that most closely matches the intent of the original provision. This ensures that the overall agreement remains intact and enforceable despite any individual clause being deemed invalid.
+                    </p>
+                </div>
+                <!-- Point 21 -->
+                <div class="terms-point">
+                    <h3>21. Entire Agreement</h3>
+                    <p>
+                        These Terms and Conditions, together with our Privacy Policy and any other legal notices published by DishRedo on the Service, constitute the entire agreement between you and DishRedo concerning the Services. They supersede all prior or contemporaneous communications, whether electronic, oral, or written, between you and DishRedo. This ensures that all understandings and agreements are captured in a single, comprehensive document.
+                    </p>
+                </div>
+                <!-- Point 22 -->
+                <div class="terms-point">
+                    <h3>22. Assignment</h3>
+                    <p>
+                        You may not assign or transfer these Terms, by operation of law or otherwise, without DishRedo's prior written consent. Any attempt by you to assign or transfer these Terms, without such consent, will be null and void. DishRedo may freely assign or transfer these Terms without restriction. Subject to the foregoing, these Terms will bind and inure to the benefit of the parties, their successors, and permitted assigns.
+                    </p>
+                </div>
+                <!-- Point 23 -->
+                <div class="terms-point">
+                    <h3>23. Force Majeure</h3>
+                    <p>
+                        DishRedo shall not be liable for any delay or failure to perform resulting from causes outside its reasonable control, including, but not limited to, acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials. This clause protects DishRedo from liabilities arising from unforeseen and uncontrollable events.
+                    </p>
+                </div>
+                <!-- Point 24 -->
+                <div class="terms-point">
+                    <h3>24. Waiver</h3>
+                    <p>
+                        No waiver by DishRedo of any term or condition set forth in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of DishRedo to assert a right or provision under these Terms shall not constitute a waiver of such right or provision. A waiver must be in writing and signed by an authorized representative of DishRedo to be effective.
+                    </p>
+                </div>
+                <!-- Point 25 -->
+                <div class="terms-point">
+                    <h3>25. Headings</h3>
+                    <p>
+                        The headings used in these Terms are for convenience only and shall not affect the interpretation of these Terms. They are provided to make the document easier to navigate and understand, but they do not carry any legal weight in defining the scope or meaning of the clauses. The content of each section is what defines its meaning.
+                    </p>
+                </div>
+                <!-- Point 26 -->
+                <div class="terms-point">
+                    <h3>26. Electronic Communications</h3>
+                    <p>
+                        By using the Services, you consent to receive electronic communications from DishRedo. These communications may include notices about your account, updates to the Services, and promotional materials. You agree that any notices, agreements, disclosures, or other communications that we send to you electronically will satisfy any legal communication requirements, including that such communications be in writing. You can manage your communication preferences.
+                    </p>
+                </div>
+                <!-- Point 27 -->
+                <div class="terms-point">
+                    <h3>27. User Conduct Standards</h3>
+                    <p>
+                        You agree to use the Services in a manner consistent with all applicable laws and regulations and in accordance with these Terms. You shall not engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Services, or which, as determined by us, may harm DishRedo or users of the Services or expose them to liability. This includes respectful interaction within community features and adherence to content guidelines.
+                    </p>
+                </div>
+                <!-- Point 28 -->
+                <div class="terms-point">
+                    <h3>28. Monitoring and Enforcement</h3>
+                    <p>
+                        DishRedo has the right, but not the obligation, to monitor User Content and your use of the Services to determine compliance with these Terms and any operating rules established by us. We also have the right to remove or refuse to post any User Content for any reason. We may also terminate or suspend your access to all or part of the Services for any or no reason, including without limitation, any violation of these Terms.
+                    </p>
+                </div>
+                <!-- Point 29 -->
+                <div class="terms-point">
+                    <h3>29. Third-Party Services and Content</h3>
+                    <p>
+                        The Services may integrate with or contain links to third-party services, websites, or content that are not owned or controlled by DishRedo. We do not endorse or assume any responsibility for any such third-party sites, information, materials, products, or services. If you access a third-party website or service from the Service, you do so at your own risk, and you understand that these Terms and DishRedo's Privacy Policy do not apply to your use of such sites.
+                    </p>
+                </div>
+                <!-- Point 30 -->
+                <div class="terms-point">
+                    <h3>30. Advertisements and Promotions</h3>
+                    <p>
+                        DishRedo may display advertisements and promotions from third parties on the Services. Your correspondence or business dealings with, or participation in promotions of, advertisers found on or through the Services, including payment and delivery of related goods or services, and any other terms, conditions, warranties, or representations associated with such dealings, are solely between you and such advertiser. DishRedo shall not be responsible or liable for any loss or damage of any sort incurred as the result of any such dealings.
+                    </p>
+                </div>
+                <!-- Point 31 -->
+                <div class="terms-point">
+                    <h3>31. Intellectual Property Infringement</h3>
+                    <p>
+                        DishRedo respects the intellectual property rights of others. If you believe that any content on the Service infringes upon your copyright or other intellectual property rights, please notify us immediately with detailed information, including identification of the copyrighted work, description of the infringing material, and your contact information. We will investigate such claims and take appropriate action, which may include removing the infringing content.
+                    </p>
+                </div>
+                <!-- Point 32 -->
+                <div class="terms-point">
+                    <h3>32. User Disputes</h3>
+                    <p>
+                        You are solely responsible for your interactions with other users of the Services. DishRedo reserves the right, but has no obligation, to monitor disputes between you and other users. We shall have no liability for your interactions with other users, or for any user's action or inaction. We encourage users to act responsibly and respectfully in all interactions within the DishRedo community.
+                    </p>
+                </div>
+                <!-- Point 33 -->
+                <div class="terms-point">
+                    <h3>33. System Availability and Maintenance</h3>
+                    <p>
+                        DishRedo strives to ensure the continuous availability of its Services but does not guarantee uninterrupted access. We may perform scheduled or unscheduled maintenance, which may temporarily interrupt or degrade access to the Services. While we will endeavor to provide notice of planned outages, we reserve the right to perform emergency maintenance without prior notification. We are not liable for any service interruptions or data loss during such events.
+                    </p>
+                </div>
+                <!-- Point 34 -->
+                <div class="terms-point">
+                    <h3>34. Beta Features and Testing</h3>
+                    <p>
+                        From time to time, DishRedo may offer new "beta" features or tools with which users may experiment. Such features or tools are provided for experimental purposes only and without any warranty of any kind, and may be modified or discontinued at our sole discretion. Your use of such beta features is entirely at your own risk. We welcome feedback on these features to help us improve them.
+                    </p>
+                </div>
+                <!-- Point 35 -->
+                <div class="terms-point">
+                    <h3>35. Geographic Restrictions</h3>
+                    <p>
+                        DishRedo is based in [Your Country/Region, e.g., the United States]. We make no claims that the Services or any of its content is accessible or appropriate outside of [Your Country/Region]. Access to the Services may not be legal by certain persons or in certain countries. If you access the Services from outside [Your Country/Region], you do so on your own initiative and are responsible for compliance with local laws.
+                    </p>
+                </div>
+                <!-- Point 36 -->
+                <div class="terms-point">
+                    <h3>36. Export Control</h3>
+                    <p>
+                        You may not use or otherwise export or re-export the Services except as authorized by [Your Country/Region] law and the laws of the jurisdiction in which the Services were obtained. In particular, but without limitation, the Services may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List.
+                    </p>
+                </div>
+                <!-- Point 37 -->
+                <div class="terms-point">
+                    <h3>37. Compliance with Laws</h3>
+                    <p>
+                        You agree to comply with all local, state, national, and international laws, rules, and regulations applicable to your use of the Services and your User Content, including those pertaining to copyright, privacy, data protection, and export control. Your responsibility to abide by these laws is paramount, ensuring that your activities on DishRedo are always lawful and ethical.
+                    </p>
+                </div>
+                <!-- Point 38 -->
+                <div class="terms-point">
+                    <h3>38. Dispute Resolution: Arbitration</h3>
+                    <p>
+                        Any dispute or claim relating in any way to your use of any DishRedo Service, or to any products or services sold or distributed by DishRedo, will be resolved by binding arbitration, rather than in court, except that you may assert claims in small claims court if your claims qualify. The Federal Arbitration Act and federal arbitration law apply to this agreement. This ensures a streamlined and potentially less costly resolution process for disputes.
+                    </p>
+                </div>
+                <!-- Point 39 -->
+                <div class="terms-point">
+                    <h3>39. Class Action Waiver</h3>
+                    <p>
+                        We each agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. If for any reason a claim proceeds in court rather than in arbitration, we each waive any right to a jury trial. This means you cannot join with other users in a class action lawsuit against DishRedo, promoting individual resolution of disputes.
+                    </p>
+                </div>
+                <!-- Point 40 -->
+                <div class="terms-point">
+                    <h3>40. Survival of Terms</h3>
+                    <p>
+                        Any provisions of these Terms that, by their nature, should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability. This ensures that certain obligations and rights continue to apply even after your use of the Services has ended, providing ongoing legal clarity for both parties.
+                    </p>
+                </div>
+                <!-- Additional points to reach word count -->
+                <div class="terms-point">
+                    <h3>41. User Responsibilities for Account Security</h3>
+                    <p>
+                        You are solely responsible for maintaining the confidentiality of your account password and for restricting access to your computer or device. You agree to accept responsibility for all activities that occur under your account or password. We strongly advise you to use strong, unique passwords and to enable any available multi-factor authentication for enhanced security. Promptly notify us of any unauthorized use or security breach.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>42. Acceptable Use Policy</h3>
+                    <p>
+                        Your use of DishRedo Services is subject to our Acceptable Use Policy, which prohibits certain activities including, but not limited to, harassment, unauthorized access, distribution of malicious software, and infringement of intellectual property. This policy is designed to ensure a safe, respectful, and productive environment for all users, and violations may lead to account suspension or termination.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>43. Content Moderation and Removal</h3>
+                    <p>
+                        DishRedo reserves the right, but not the obligation, to review, edit, or remove User Content that we deem, in our sole discretion, to be in violation of these Terms or harmful to the Services or other users. While we strive to maintain a positive environment, we are not responsible for monitoring all content, and users are encouraged to report inappropriate material.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>44. Third-Party Payment Processors</h3>
+                    <p>
+                        For any purchases made through DishRedo, we utilize third-party payment processors. Your payment information is handled directly by these processors and is subject to their terms and conditions and privacy policies. DishRedo does not store your full payment card details. We are not responsible for the security or performance of these third-party payment systems.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>45. Beta Program Participation</h3>
+                    <p>
+                        Participation in any beta programs or early access features offered by DishRedo is voluntary and at your own risk. Beta features may be unstable, incomplete, or contain bugs. Your feedback on these features is valuable, but DishRedo is not obligated to implement any suggestions or to provide ongoing support for beta features.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>46. Changes to Service Features</h3>
+                    <p>
+                        DishRedo reserves the right to modify, suspend, or discontinue any aspect of the Services at any time, including the availability of any feature, database, or content, without prior notice or liability. While we strive for continuous improvement, changes may occur to enhance functionality, address technical issues, or adapt to market demands.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>47. No Guarantee of Content Availability</h3>
+                    <p>
+                        While we strive to provide a vast and diverse library of recipes and content, DishRedo does not guarantee the perpetual availability of any specific recipe, article, or piece of content. Content may be removed or updated at our discretion. We recommend saving or printing any content you wish to retain for long-term reference.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>48. User Support and Service Level</h3>
+                    <p>
+                        DishRedo aims to provide timely and helpful user support. However, we do not guarantee specific response times or resolutions for all inquiries. Our support services are provided on an "as-is" basis, and we reserve the right to modify or discontinue support channels at any time without prior notice.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>49. Data Backup Responsibility</h3>
+                    <p>
+                        While DishRedo implements data backup procedures, you are ultimately responsible for backing up any User Content that you deem important. We are not liable for any loss or corruption of your User Content. We encourage users to keep personal copies of their valuable contributions.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>50. External APIs and Data Integration</h3>
+                    <p>
+                        Our Services may integrate with external APIs or data sources to provide enhanced features (e.g., nutritional information, ingredient sourcing). We are not responsible for the accuracy, reliability, or availability of data provided by these third-party APIs. Your use of features relying on external data is at your own risk.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>51. User Conduct in Community Forums</h3>
+                    <p>
+                        When participating in DishRedo's community forums or comment sections, you agree to engage in constructive and respectful dialogue. Harassment, personal attacks, hate speech, or any form of disruptive behavior is strictly prohibited. We reserve the right to moderate or remove content and suspend accounts that violate these community guidelines.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>52. Reporting Violations</h3>
+                    <p>
+                        If you encounter any content or user behavior that you believe violates these Terms, please report it to us immediately using the designated reporting tools or by contacting our support team. Your vigilance helps us maintain a safe and positive environment for all members of the DishRedo community.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>53. No Professional Advice</h3>
+                    <p>
+                        Any information provided on DishRedo, including recipes, cooking tips, or dietary suggestions, is for general informational purposes only and does not constitute professional advice. Always consult with a qualified professional (e.g., nutritionist, doctor, chef) for specific advice tailored to your individual needs or circumstances.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>54. Use of Automated Systems</h3>
+                    <p>
+                        You agree not to use any automated system, including without limitation "robots," "spiders," "offline readers," etc., to access the Services in a manner that sends more request messages to the DishRedo servers in a given period than a human can reasonably produce in the same period by using a conventional on-line web browser.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>55. Modification of Services</h3>
+                    <p>
+                        DishRedo reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, the Services (or any part thereof) with or without notice. You agree that DishRedo shall not be liable to you or to any third party for any modification, suspension, or discontinuance of the Services.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>56. User-Submitted Recipe Review</h3>
+                    <p>
+                        While DishRedo may review user-submitted recipes for appropriateness and adherence to guidelines, we do not guarantee the accuracy, safety, or quality of all user-generated content. Users are encouraged to exercise caution and discretion when trying recipes submitted by other community members.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>57. No Resale of Services</h3>
+                    <p>
+                        You agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the Services, use of the Services, or access to the Services without express written permission by DishRedo. The Services are provided for your personal, non-commercial use unless otherwise explicitly agreed upon.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>58. Trademarks</h3>
+                    <p>
+                        The DishRedo name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of DishRedo or its affiliates or licensors. You must not use such marks without the prior written permission of DishRedo. All other names, logos, product and service names, designs, and slogans on this Website are the trademarks of their respective owners.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>59. International Use Compliance</h3>
+                    <p>
+                        Recognizing the global nature of the Internet, you agree to comply with all local rules regarding online conduct and acceptable content. Specifically, you agree to comply with all applicable laws regarding the transmission of technical data exported from the country in which you reside.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>60. No Joint Venture or Partnership</h3>
+                    <p>
+                        You agree that no joint venture, partnership, employment, or agency relationship exists between you and DishRedo as a result of these Terms or your use of the Services. These Terms are solely between you and DishRedo and do not create any third-party beneficiary rights.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>61. Survival of Obligations</h3>
+                    <p>
+                        All provisions of these Terms which by their nature should survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability, shall remain in full force and effect after termination of your account or access to the Services.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>62. User Generated Content Licensing</h3>
+                    <p>
+                        By submitting User Content, you automatically grant to DishRedo a royalty-free, perpetual, irrevocable, non-exclusive, fully transferable, and sublicensable right and license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content worldwide and/or to incorporate it in other works in any form, media, or technology now known or later developed.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>63. Disclaimer Regarding Nutritional Information</h3>
+                    <p>
+                        Any nutritional information provided on DishRedo is an estimate and should not be considered a substitute for professional nutritional advice. Nutritional values can vary significantly based on ingredient brands, preparation methods, and portion sizes. We recommend consulting a registered dietitian or healthcare professional for personalized dietary guidance.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>64. Reporting Technical Issues</h3>
+                    <p>
+                        Users are encouraged to report any technical issues, bugs, or errors encountered while using the Services. While we strive for a seamless experience, your feedback helps us identify and resolve problems quickly. Please provide as much detail as possible when reporting issues to assist our technical team.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>65. Account Suspension and Reactivation</h3>
+                    <p>
+                        In cases of account suspension due to a violation of these Terms, DishRedo will typically provide notice and an opportunity to rectify the issue, where appropriate. Account reactivation is at our sole discretion and may be subject to certain conditions, including a commitment to adhere to all terms.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>66. Prohibition of Data Scraping</h3>
+                    <p>
+                        You are expressly prohibited from using any data mining, robots, or similar data gathering and extraction tools on the Services, or from framing any portion of the Services, or otherwise using any automated means to access, monitor, or copy any portion of the Services. Unauthorized scraping of data is a violation of these terms.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>67. User Conduct in Live Events/Webinars</h3>
+                    <p>
+                        If DishRedo hosts live events, webinars, or interactive sessions, your participation is subject to these Terms and any specific rules announced for the event. Disruptive, offensive, or inappropriate behavior will not be tolerated and may result in your removal from the event and potential account suspension.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>68. Limitation on Damages for Breach</h3>
+                    <p>
+                        In the event of a breach of these Terms by DishRedo, our liability for damages shall be limited to the amount paid by you, if any, for accessing or using the Services during the twelve (12) months immediately preceding the event giving rise to the claim. This limitation applies to direct damages only.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>69. Third-Party Software and Components</h3>
+                    <p>
+                        The Services may incorporate third-party software or components, which are provided under their respective licenses. Your use of such components is subject to the terms of those licenses, in addition to these Terms. We ensure that all third-party components are used in compliance with their legal requirements.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>70. No Endorsement of User Content</h3>
+                    <p>
+                        DishRedo does not endorse any User Content submitted to the Services. User Content represents the views and opinions of the individual users and not necessarily those of DishRedo. We are not responsible for the accuracy, usefulness, or safety of any User Content.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>71. Privacy Policy Integration</h3>
+                    <p>
+                        These Terms expressly incorporate our Privacy Policy. By agreeing to these Terms, you also agree to the collection, use, and disclosure of your information as described in our Privacy Policy. We encourage you to read both documents to fully understand your rights and our obligations.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>72. Digital Millennium Copyright Act (DMCA)</h3>
+                    <p>
+                        DishRedo respects the rights of copyright holders and has adopted a policy of terminating, in appropriate circumstances, users who are repeat infringers of copyrighted works. If you believe your copyright has been infringed, please send a DMCA notice to our designated agent as outlined in our policies.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>73. Data Security Measures</h3>
+                    <p>
+                        While we implement reasonable security measures to protect your personal information, we cannot guarantee absolute security. You acknowledge that no method of transmission over the Internet, or method of electronic storage, is 100% secure. You use the Services at your own risk regarding data security.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>74. Modifications to Pricing and Subscription Terms</h3>
+                    <p>
+                        DishRedo reserves the right to modify pricing for any premium features, subscriptions, or digital products at any time. We will provide reasonable notice of any price changes. Your continued use of paid services after a price change constitutes your agreement to pay the modified amount.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>75. User Generated Content Storage</h3>
+                    <p>
+                        DishRedo may, at its sole discretion, set limits on the storage of User Content, including the number of recipes, photos, or comments you can store on our servers. We reserve the right to delete User Content that exceeds these limits or is no longer relevant, with prior notice where feasible.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>76. Compliance with Accessibility Standards</h3>
+                    <p>
+                        DishRedo strives to make its Services accessible to all users, including those with disabilities. We endeavor to comply with relevant accessibility standards and guidelines. If you encounter any accessibility barriers, please contact us so we can work to improve your experience.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>77. No Medical Advice</h3>
+                    <p>
+                        The content on DishRedo is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this Service.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>78. Feedback Ownership</h3>
+                    <p>
+                        Any feedback, suggestions, or ideas you provide regarding the Services become the property of DishRedo. You agree that DishRedo may use and exploit such feedback without any obligation or compensation to you. This allows us to continuously improve our platform based on user input.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>79. Account Deactivation vs. Deletion</h3>
+                    <p>
+                        You may have the option to temporarily deactivate your account, which hides your profile and content from public view but retains your data. Full account deletion, which permanently removes your data (subject to our data retention policy), requires a specific request to our support team.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>80. User-Submitted Content Review Process</h3>
+                    <p>
+                        User-submitted content may be subject to a review process before being published or made widely available on the Services. This review is to ensure compliance with our content guidelines and these Terms, maintaining the quality and appropriateness of the DishRedo community content.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>81. Rights Reserved</h3>
+                    <p>
+                        Any rights not expressly granted herein are reserved by DishRedo. This means that if a right is not explicitly given to you in these Terms, it remains with DishRedo. This clause ensures clarity on the scope of user permissions and DishRedo's retained authority over its Services.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>82. Interpretation of Terms</h3>
+                    <p>
+                        These Terms should be interpreted in a manner that is fair and reasonable to both parties. If any ambiguity or uncertainty arises in the interpretation of these Terms, it shall be resolved in a way that best reflects the mutual intent of the parties at the time of agreement.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>83. Relationship of Parties</h3>
+                    <p>
+                        Nothing contained in these Terms shall be construed as creating any agency, partnership, joint venture, or other form of joint enterprise, employment, or fiduciary relationship between you and DishRedo. You are an independent user of the Services, and these Terms do not imply any other relationship.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>84. Injunctive Relief</h3>
+                    <p>
+                        You acknowledge that a breach of these Terms by you may cause irreparable harm to DishRedo, for which monetary damages would be inadequate. Therefore, in the event of such a breach, DishRedo shall be entitled to seek injunctive relief in addition to any other remedies available at law or in equity.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>85. Non-Circumvention</h3>
+                    <p>
+                        You agree not to circumvent, disable, or otherwise interfere with any security-related features of the Services or features that prevent or restrict use or copying of any content or enforce limitations on use of the Services or the content therein. This ensures the integrity and intended functionality of our platform.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>86. External Service Integration Terms</h3>
+                    <p>
+                        When you integrate your DishRedo account with external services (e.g., social media logins), you agree to abide by the terms and conditions of those external services in addition to these Terms. DishRedo is not responsible for the practices of external services.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>87. Fair Use of Resources</h3>
+                    <p>
+                        You agree to use the Services and its resources fairly and reasonably. Excessive use of bandwidth, storage, or processing power that negatively impacts other users or the Service's performance may result in warnings, restrictions, or account suspension at DishRedo's discretion.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>88. Disclaimer of Third-Party Content</h3>
+                    <p>
+                        DishRedo does not control, endorse, or assume responsibility for any third-party content (including advertisements) that may be displayed on the Services. Your interactions with such content are solely between you and the third party, and DishRedo is not liable for any issues arising from them.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>89. Feedback and Intellectual Property</h3>
+                    <p>
+                        Any feedback, suggestions, or ideas you provide to DishRedo regarding the Services or new features will be treated as non-confidential and non-proprietary. You grant DishRedo a perpetual, irrevocable, worldwide, royalty-free license to use, modify, and incorporate such feedback without compensation to you.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>90. Content Licensing for DishRedo Use</h3>
+                    <p>
+                        By submitting content to DishRedo, you grant us a broad license to use, display, reproduce, and distribute your content across our platforms and for promotional purposes. This allows us to feature your "Redos" and contributions, enhancing the community experience and promoting culinary creativity.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>91. User-Submitted Recipe Accuracy</h3>
+                    <p>
+                        While we encourage users to share their recipes, DishRedo cannot guarantee the accuracy, completeness, or safety of all user-submitted recipes. Users should exercise their own judgment and discretion when preparing any recipe found on the platform, especially regarding ingredient quantities and cooking times.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>92. No Guarantees of Success</h3>
+                    <p>
+                        DishRedo provides tools and inspiration for culinary experimentation, but we do not guarantee specific outcomes or success in your cooking endeavors. The art of cooking involves many variables, and results may vary. We encourage continuous learning and joyful experimentation, regardless of the outcome.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>93. Account Transfer Prohibition</h3>
+                    <p>
+                        Your DishRedo account is personal to you and may not be transferred, sold, or assigned to any other person or entity. Any attempt to transfer your account will be null and void. This ensures the integrity of user identities and prevents unauthorized access or misuse of accounts.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>94. Compliance with Export Laws</h3>
+                    <p>
+                        You represent and warrant that you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>95. Updates to Service Features</h3>
+                    <p>
+                        DishRedo may regularly update and enhance its Service features. These updates may include new functionalities, improvements to existing tools, or removal of outdated features. We aim to provide a dynamic and evolving platform, and your continued use implies acceptance of these ongoing changes.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>96. Community Guidelines Adherence</h3>
+                    <p>
+                        Your participation in DishRedo's community features (e.g., comments, forums) is subject to our Community Guidelines. These guidelines promote a positive, inclusive, and respectful environment. Violations may lead to content removal or account suspension.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>97. No Partnership Implied</h3>
+                    <p>
+                        Your use of DishRedo does not create any partnership, joint venture, employment, or agency relationship between you and DishRedo. You are an independent user, and these terms are solely for governing your access to and use of our Services.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>98. Limitation on Content Backups</h3>
+                    <p>
+                        While DishRedo takes reasonable steps to back up user data, we do not guarantee that all User Content will be backed up or recoverable. We encourage users to maintain their own backups of any critical content they submit to the platform.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>99. Disclaimer of Endorsement</h3>
+                    <p>
+                        DishRedo does not endorse any products, services, or opinions expressed by third parties or other users on the platform. Any references to third-party content or products are for informational purposes only and do not imply endorsement or recommendation by DishRedo.
+                    </p>
+                </div>
+                <div class="terms-point">
+                    <h3>100. Entire Agreement Clause</h3>
+                    <p>
+                        These Terms and Conditions, along with our Privacy Policy, constitute the entire and exclusive understanding and agreement between you and DishRedo regarding the Services, and these Terms supersede and replace any and all prior oral or written understandings or agreements between you and DishRedo regarding the Services.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-black py-8 text-cream-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <h4 class="text-2xl font-bold text-zesty-orange mb-2">DishRedo.</h4>
+                <p class="text-gray-400">Flip the Recipe. Remix the Rules.</p>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-400">
+                    <strong>Address:</strong> 123 Remix Lane, Flavor Town, Culinary State, 90210, USA
+                </p>
+                <p class="text-gray-400">
+                    <strong>Email:</strong> info@dishredo.com | <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Facebook</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Twitter</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Pinterest</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 DishRedo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishRedo Contact Us — Flip the Recipe. Remix the Rules.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration for DishRedo Colors */
+        :root {
+            --color-zesty-orange: #FF7043;
+            --color-slate-black: #212121;
+            --color-cream-white: #FAFAFA;
+            --color-basil-green: #81C784;
+            --color-electric-yellow: #FFEB3B;
+        }
+
+        .bg-zesty-orange { background-color: var(--color-zesty-orange); }
+        .text-zesty-orange { color: var(--color-zesty-orange); }
+        .hover\:bg-zesty-orange-dark:hover { background-color: #E65C34; } /* Slightly darker for hover */
+
+        .bg-slate-black { background-color: var(--color-slate-black); }
+        .text-slate-black { color: var(--color-slate-black); }
+
+        .bg-cream-white { background-color: var(--color-cream-white); }
+        .text-cream-white { color: var(--color-cream-white); }
+
+        .bg-basil-green { background-color: var(--color-basil-green); }
+        .text-basil-green { color: var(--color-basil-green); }
+
+        .bg-electric-yellow { background-color: var(--color-electric-yellow); }
+        .text-electric-yellow { color: var(--color-electric-yellow); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-slate-black);
+            color: var(--color-cream-white);
+        }
+
+        /* Custom button styles for DishRedo */
+        .btn-primary {
+            @apply bg-zesty-orange text-cream-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange-dark transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-zesty-orange text-zesty-orange font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange hover:text-cream-white;
+        }
+
+        /* Custom card styles */
+        .card {
+            @apply bg-cream-white text-slate-black p-6 rounded-lg shadow-xl;
+        }
+
+        /* Contact page specific styles */
+        .contact-point {
+            @apply mb-8 p-6 rounded-lg shadow-md bg-slate-black text-cream-white;
+        }
+        .contact-point h3 {
+            @apply text-xl font-semibold text-zesty-orange mb-3;
+        }
+        .contact-point p {
+            @apply text-gray-300 text-base leading-relaxed;
+        }
+        .form-input {
+            @apply w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-cream-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zesty-orange;
+        }
+        .form-textarea {
+            @apply w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-cream-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zesty-orange h-32;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-slate-black py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-3xl font-extrabold text-zesty-orange">DishRedo<span class="text-cream-white">.</span></a>
+            <nav>
+                <ul class="flex space-x-6">
+                     <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- Contact Us Hero Section -->
+        <section class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">Reach Out:</span> We're Here to Help.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    Have a question, feedback, or a brilliant recipe idea? We'd love to hear from you! Our team is dedicated to supporting your culinary journey. Use the form below or explore our detailed contact options.
+                </p>
+                <a href="#contact-form" class="btn-primary">Send Us a Message</a>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">Send Us a Message</h2>
+            <p class="text-lg text-center text-gray-700 mb-12">
+                Fill out the form below and our team will get back to you as soon as possible. Please provide as much detail as you can so we can assist you effectively.
+            </p>
+            <form action="#" method="POST" class="max-w-2xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-slate-black mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium text-slate-black mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="john.doe@example.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block text-lg font-medium text-slate-black mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Inquiry about a recipe, technical issue, etc." required>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium text-slate-black mb-2">Your Message</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Extensive Contact Details Section -->
+        <section id="contact-details" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">Detailed Contact Options & Information</h2>
+            <p class="text-lg text-gray-700 mb-12">
+                At DishRedo, we understand that you might have various reasons to get in touch with us. To ensure your query reaches the right department and receives the most efficient response, we've outlined detailed contact options below. Whether it's a technical issue, a partnership opportunity, media inquiry, or just sharing your latest culinary triumph, we're here to listen and assist. Our commitment is to provide clear pathways for communication, making your experience with DishRedo as smooth and supportive as possible.
+            </p>
+
+            <div class="space-y-8">
+                <!-- Point 1 -->
+                <div class="contact-point">
+                    <h3>1. General Inquiries & Feedback</h3>
+                    <p>
+                        For any general questions about DishRedo, our mission, or if you simply want to share your thoughts and feedback on your experience, this is the best channel. We value all user input as it helps us continuously improve our platform and content. Your insights are crucial for shaping the future of DishRedo and ensuring it remains a valuable resource for all culinary enthusiasts. We aim to respond to all general inquiries within 2-3 business days, providing thoughtful and helpful responses.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="contact-point">
+                    <h3>2. Technical Support & Website Issues</h3>
+                    <p>
+                        If you are experiencing any technical difficulties with the website, mobile app, or any interactive tools (e.g., Remix Generator not working, login problems, broken links), please contact our technical support team. Provide a detailed description of the issue, including screenshots if possible, and the device/browser you are using. Our technical team is dedicated to resolving issues swiftly to ensure a seamless and enjoyable user experience for everyone on DishRedo.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="contact-point">
+                    <h3>3. Recipe Questions & Culinary Advice</h3>
+                    <p>
+                        Have a specific question about a DishRedo recipe, need clarification on an ingredient, or seeking advice on a culinary technique? Our team of experienced chefs and food experts is here to help. While we cannot offer personalized dietary or medical advice, we can guide you through recipe steps, suggest ingredient substitutions, and provide tips to perfect your Redos. We love helping you unleash your inner chef!
+                    </p>
+                </div>
+                <!-- Point 4 -->
+                <div class="contact-point">
+                    <h3>4. Partnership & Collaboration Opportunities</h3>
+                    <p>
+                        For businesses, brands, or content creators interested in collaborating with DishRedo, please reach out to our partnerships team. We are open to exploring exciting opportunities that align with our brand vision, including sponsored content, joint campaigns, product integrations, and cross-promotional activities. We seek partners who share our passion for culinary innovation and creativity, aiming to create mutually beneficial ventures.
+                    </p>
+                </div>
+                <!-- Point 5 -->
+                <div class="contact-point">
+                    <h3>5. Media & Press Inquiries</h3>
+                    <p>
+                        Members of the media, journalists, and public relations professionals seeking information about DishRedo, interviews with our founders or team, press kits, or media assets should contact our media relations department. We are happy to provide insights into our unique approach to recipes, upcoming features, and our impact on the culinary community. Please include your publication/outlet and specific inquiry details for a prompt response.
+                    </p>
+                </div>
+                <!-- Point 6 -->
+                <div class="contact-point">
+                    <h3>6. Community Guidelines & Moderation</h3>
+                    <p>
+                        If you encounter any content or user behavior within our community features (e.g., comments, forums, user-submitted Redos) that violates our Community Guidelines, please report it to our moderation team. We are committed to maintaining a positive, respectful, and safe environment for all users. Your reports help us enforce our policies and ensure a high-quality interaction space for everyone passionate about food.
+                    </p>
+                </div>
+                <!-- Point 7 -->
+                <div class="contact-point">
+                    <h3>7. Marketplace & Product Support</h3>
+                    <p>
+                        For questions related to products featured in the DishRedo Marketplace, including ingredient bundles, kitchen gear, spice packs, or downloadable e-books, please direct your inquiries here. This includes questions about orders, shipping, returns, or product details. Our marketplace support team will assist you with any concerns to ensure a smooth shopping experience and satisfaction with your purchases.
+                    </p>
+                </div>
+                <!-- Point 8 -->
+                <div class="contact-point">
+                    <h3>8. Advertising Opportunities</h3>
+                    <p>
+                        For inquiries regarding advertising on the DishRedo platform, including banner ads, sponsored recipe placements, or integrated brand campaigns, please contact our advertising sales team. We offer various tailored solutions to help brands connect with our engaged and culinary-focused audience. Provide details about your brand and advertising goals for a customized proposal.
+                    </p>
+                </div>
+                <!-- Point 9 -->
+                <div class="contact-point">
+                    <h3>9. Data Privacy & Your Rights</h3>
+                    <p>
+                        If you have questions about our Privacy Policy, how your personal data is collected, used, or stored, or wish to exercise your data rights (e.g., access, correction, deletion of your data), please contact our Data Protection Officer. We are committed to transparency and compliance with data protection regulations, ensuring your privacy is respected and your rights are upheld.
+                    </p>
+                </div>
+                <!-- Point 10 -->
+                <div class="contact-point">
+                    <h3>10. Legal Inquiries & Copyright</h3>
+                    <p>
+                        For any legal matters, including intellectual property infringement claims (copyright, trademark), subpoenas, or other formal legal notices, please direct your correspondence to our legal department. All legal inquiries must be submitted in writing. We take legal matters seriously and will respond to valid claims in accordance with applicable laws and regulations, protecting our rights and those of our users.
+                    </p>
+                </div>
+                <!-- Point 11 -->
+                <div class="contact-point">
+                    <h3>11. Career Opportunities</h3>
+                    <p>
+                        Interested in joining the DishRedo team? For information about current job openings, internships, or general career inquiries, please visit our careers page or contact our HR department. We are always looking for passionate, innovative individuals to help us grow and continue revolutionizing the recipe experience. Join us in flipping the recipe and remixing the rules!
+                    </p>
+                </div>
+                <!-- Point 12 -->
+                <div class="contact-point">
+                    <h3>12. Accessibility Support</h3>
+                    <p>
+                        DishRedo is committed to making our website and services accessible to all users. If you encounter any accessibility barriers or have suggestions on how we can improve accessibility for users with disabilities, please contact our accessibility support team. Your feedback is invaluable in helping us create an inclusive and user-friendly experience for everyone.
+                    </p>
+                </div>
+                <!-- Point 13 -->
+                <div class="contact-point">
+                    <h3>13. API & Developer Inquiries</h3>
+                    <p>
+                        For developers or businesses interested in integrating with DishRedo's API or exploring data partnerships, please contact our developer relations team. We can provide documentation, support, and discuss potential collaborations that leverage our culinary data and interactive tools. We are excited about fostering innovation within the food tech ecosystem.
+                    </p>
+                </div>
+                <!-- Point 14 -->
+                <div class="contact-point">
+                    <h3>14. Event & Campaign Participation</h3>
+                    <p>
+                        If you have questions about participating in our "Special Campaigns & Events," such as "Remix the Leftovers" or "Speed Run Redos," or need assistance with contest rules and submissions, please contact our events coordination team. We're here to help you get involved and make the most of our exciting community challenges.
+                    </p>
+                </div>
+                <!-- Point 15 -->
+                <div class="contact-point">
+                    <h3>15. Press Kit Requests</h3>
+                    <p>
+                        Journalists and media outlets can request our official press kit, which includes high-resolution logos, brand guidelines, key statistics, and executive bios. This resource is designed to provide comprehensive information for accurate reporting and feature articles about DishRedo and its unique offerings.
+                    </p>
+                </div>
+                <!-- Point 16 -->
+                <div class="contact-point">
+                    <h3>16. Content Licensing & Syndication</h3>
+                    <p>
+                        For inquiries regarding licensing DishRedo's original content, recipes, or interactive tools for use on other platforms, publications, or commercial ventures, please contact our content licensing department. We offer various licensing models to suit different needs, ensuring proper usage and attribution of our valuable culinary assets.
+                    </p>
+                </div>
+                <!-- Point 17 -->
+                <div class="contact-point">
+                    <h3>17. User Account Management</h3>
+                    <p>
+                        For assistance with managing your DishRedo user account, including updating profile information, changing passwords, or managing notification preferences, please refer to our FAQ section or contact our user support team. We aim to make account management straightforward and secure for all our members.
+                    </p>
+                </div>
+                <!-- Point 18 -->
+                <div class="contact-point">
+                    <h3>18. Report Spam or Abuse</h3>
+                    <p>
+                        If you encounter any spam, abusive content, or suspicious activity from other users on the platform, please report it immediately to our trust and safety team. Your reports are crucial in helping us maintain a safe and positive online environment for the entire DishRedo community, ensuring a high standard of conduct.
+                    </p>
+                </div>
+                <!-- Point 19 -->
+                <div class="contact-point">
+                    <h3>19. Suggestions for New Features</h3>
+                    <p>
+                        We are always eager to hear your ideas for new features, tools, or improvements to DishRedo. If you have a suggestion that could enhance the user experience or add value to our culinary platform, please submit it through our feedback portal or contact our product development team. Your innovation helps us grow.
+                    </p>
+                </div>
+                <!-- Point 20 -->
+                <div class="contact-point">
+                    <h3>20. Website Performance Issues</h3>
+                    <p>
+                        If you notice any significant slowdowns, loading errors, or other performance-related issues with the DishRedo website, please inform our technical team. Providing details like the specific page, time of day, and your internet connection speed can help us diagnose and resolve the problem more efficiently, ensuring optimal performance.
+                    </p>
+                </div>
+                <!-- Point 21 -->
+                <div class="contact-point">
+                    <h3>21. Mobile App Support</h3>
+                    <p>
+                        For issues specific to the DishRedo mobile application on iOS or Android, such as crashes, display errors, or feature malfunctions within the app, please contact our dedicated mobile app support team. Include your device model, operating system version, and app version to help us troubleshoot effectively.
+                    </p>
+                </div>
+                <!-- Point 22 -->
+                <div class="contact-point">
+                    <h3>22. Content Correction Requests</h3>
+                    <p>
+                        If you believe there is an error in a recipe, an article, or any other content on DishRedo (e.g., incorrect ingredient, typo, broken link), please notify our content team. We strive for accuracy and appreciate your help in maintaining the quality and reliability of our culinary information.
+                    </p>
+                </div>
+                <!-- Point 23 -->
+                <div class="contact-point">
+                    <h3>23. Bulk Download Inquiries</h3>
+                    <p>
+                        For academic researchers, culinary schools, or businesses interested in bulk downloads of DishRedo's publicly available recipe data or other content for non-commercial research or educational purposes, please contact our data licensing team. We can discuss potential agreements and data access protocols.
+                    </p>
+                </div>
+                <!-- Point 24 -->
+                <div class="contact-point">
+                    <h3>24. Feedback on Interactive Tools</h3>
+                    <p>
+                        Your experience with our interactive tools, such as the Flavor Boost Slider or Global Ingredient Swap Tool, is important to us. If you have feedback on their functionality, suggestions for improvement, or encounter any usability issues, please share your thoughts with our product development team.
+                    </p>
+                </div>
+                <!-- Point 25 -->
+                <div class="contact-point">
+                    <h3>25. Sponsorship Opportunities</h3>
+                    <p>
+                        Brands looking to sponsor specific recipe categories, interactive tools, or special campaigns on DishRedo should contact our sponsorship team. We offer tailored packages that provide prominent visibility and engagement with our highly targeted culinary audience, aligning your brand with innovation.
+                    </p>
+                </div>
+                <!-- Point 26 -->
+                <div class="contact-point">
+                    <h3>26. User-Submitted Content Guidelines Questions</h3>
+                    <p>
+                        If you have questions about the specific guidelines for submitting your own recipes, photos, or comments to DishRedo, or need clarification on what constitutes acceptable user content, please reach out to our community management team. We're here to help you share your creations successfully.
+                    </p>
+                </div>
+                <!-- Point 27 -->
+                <div class="contact-point">
+                    <h3>27. Educational Partnerships</h3>
+                    <p>
+                        For culinary schools, educational institutions, or non-profit organizations interested in partnering with DishRedo for educational initiatives, workshops, or curriculum development, please contact our educational outreach team. We believe in fostering culinary education and innovation.
+                    </p>
+                </div>
+                <!-- Point 28 -->
+                <div class="contact-point">
+                    <h3>28. Affiliate Program Inquiries</h3>
+                    <p>
+                        If you are a blogger, influencer, or website owner interested in joining the DishRedo affiliate program to earn commissions by promoting our Services or Marketplace products, please contact our affiliate management team. We offer competitive commission rates and support for our partners.
+                    </p>
+                </div>
+                <!-- Point 29 -->
+                <div class="contact-point">
+                    <h3>29. Investor Relations</h3>
+                    <p>
+                        For potential investors or financial analysts seeking information about DishRedo's business model, financial performance, or growth strategy, please contact our investor relations department. All inquiries will be handled with confidentiality and in accordance with financial regulations.
+                    </p>
+                </div>
+                <!-- Point 30 -->
+                <div class="contact-point">
+                    <h3>30. Data Access Requests (SAR)</h3>
+                    <p>
+                        To submit a Subject Access Request (SAR) to obtain a copy of your personal data held by DishRedo, please contact our Data Protection Officer. We will guide you through the necessary steps and ensure your request is processed in compliance with applicable data protection laws.
+                    </p>
+                </div>
+                <!-- Point 31 -->
+                <div class="contact-point">
+                    <h3>31. Deletion of Personal Data (Right to Erasure)</h3>
+                    <p>
+                        If you wish to request the deletion of your personal data from DishRedo's systems, please contact our Data Protection Officer. We will review your request and proceed with deletion in accordance with our data retention policy and legal obligations, respecting your right to be forgotten.
+                    </p>
+                </div>
+                <!-- Point 32 -->
+                <div class="contact-point">
+                    <h3>32. Correction of Personal Data</h3>
+                    <p>
+                        If you believe that any personal information we hold about you is inaccurate or incomplete, you have the right to request its correction. Please contact our Data Protection Officer with the details of the inaccuracies, and we will promptly update your information to ensure its accuracy.
+                    </p>
+                </div>
+                <!-- Point 33 -->
+                <div class="contact-point">
+                    <h3>33. Objection to Data Processing</h3>
+                    <p>
+                        You have the right to object to the processing of your personal data under certain circumstances, particularly when processing is based on legitimate interests or for direct marketing. Please contact our Data Protection Officer to exercise this right, and we will assess your request in line with legal requirements.
+                    </p>
+                </div>
+                <!-- Point 34 -->
+                <div class="contact-point">
+                    <h3>34. Data Portability Requests</h3>
+                    <p>
+                        To request your personal data in a structured, commonly used, and machine-readable format for transfer to another service, please contact our Data Protection Officer. We facilitate data portability to empower your control over your digital information, making it easier to move your data.
+                    </p>
+                </div>
+                <!-- Point 35 -->
+                <div class="contact-point">
+                    <h3>35. Restriction of Data Processing</h3>
+                    <p>
+                        Under certain conditions, you have the right to request that we restrict the processing of your personal data. This may apply if you contest the accuracy of your data or if the processing is unlawful. Contact our Data Protection Officer to discuss this right and its implications for your data.
+                    </p>
+                </div>
+                <!-- Point 36 -->
+                <div class="contact-point">
+                    <h3>36. Automated Decision-Making Concerns</h3>
+                    <p>
+                        If you have concerns about automated decision-making or profiling related to your data on DishRedo, please contact our Data Protection Officer. We aim for transparency in our use of algorithms and provide mechanisms for you to understand and manage their impact on your experience.
+                    </p>
+                </div>
+                <!-- Point 37 -->
+                <div class="contact-point">
+                    <h3>37. Reporting Security Vulnerabilities</h3>
+                    <p>
+                        If you are a security researcher and discover a potential vulnerability in DishRedo's website or services, please report it responsibly through our designated security contact channel. We appreciate your efforts in helping us maintain a secure platform and will respond promptly to valid reports.
+                    </p>
+                </div>
+                <!-- Point 38 -->
+                <div class="contact-point">
+                    <h3>38. Brand Licensing Inquiries</h3>
+                    <p>
+                        For inquiries regarding licensing the DishRedo brand, logo, or other trademarks for commercial use, please contact our brand licensing department. All uses of our brand assets require explicit written permission and adherence to our brand guidelines to protect our intellectual property.
+                    </p>
+                </div>
+                <!-- Point 39 -->
+                <div class="contact-point">
+                    <h3>39. Customer Testimonials & Success Stories</h3>
+                    <p>
+                        If you have a compelling success story or would like to provide a testimonial about how DishRedo has transformed your cooking experience, we would love to hear from you. Please contact our marketing team to share your journey and inspire other users in our community.
+                    </p>
+                </div>
+                <!-- Point 40 -->
+                <div class="contact-point">
+                    <h3>40. General Business Inquiries</h3>
+                    <p>
+                        For any other business-related inquiries that do not fit into the categories above, such as general corporate information, investor relations (if not covered by a specific point), or other administrative matters, please use our general business inquiry contact. We will direct your message to the appropriate department.
+                    </p>
+                </div>
+                <!-- Point 41 -->
+                <div class="contact-point">
+                    <h3>41. Content Submission Guidelines</h3>
+                    <p>
+                        If you are interested in submitting your own original recipes, articles, or other culinary content to be featured on DishRedo, please review our content submission guidelines. For specific questions after reviewing the guidelines, contact our content editorial team for assistance and review processes.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>42. Mobile App Feature Requests</h3>
+                    <p>
+                        We are always looking to enhance our mobile app experience. If you have specific feature requests or ideas for improvements to the DishRedo mobile application, please share them with our mobile development team. Your suggestions help us prioritize and build the features you want most.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>43. Event Sponsorships</h3>
+                    <p>
+                        For brands or organizations interested in sponsoring DishRedo's online or offline events, such as cooking challenges, virtual workshops, or community meetups, please contact our events sponsorship team. We offer tailored packages to maximize your brand's visibility and engagement with our audience.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>44. Technical Partnership Inquiries</h3>
+                    <p>
+                        For technology companies interested in technical integrations, API partnerships, or exploring joint development opportunities with DishRedo, please contact our technical partnerships team. We are open to collaborations that leverage innovative technologies to enhance the culinary experience.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>45. Press Kit Updates</h3>
+                    <p>
+                        If you are a media professional who has previously received our press kit and require updated information, new assets, or specific data points for an upcoming story, please contact our media relations team. We ensure our media resources are current and comprehensive for accurate reporting.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>46. General Media Inquiries</h3>
+                    <p>
+                        For all general media-related questions, requests for interviews with DishRedo executives, or background information about the company, please contact our public relations department. We are committed to providing timely and relevant information to the press.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>47. Recipe Licensing for Commercial Use</h3>
+                    <p>
+                        Businesses or individuals interested in licensing specific DishRedo recipes for commercial purposes, such as inclusion in cookbooks, menus, or product packaging, should contact our commercial licensing team. All commercial uses require a formal licensing agreement.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>48. User Research Participation</h3>
+                    <p>
+                        DishRedo periodically conducts user research studies, surveys, and interviews to gather in-depth insights into user needs and preferences. If you are interested in participating in future user research, please contact our UX research team. Your input directly influences product development.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>49. Content Syndication Partnerships</h3>
+                    <p>
+                        For publishers or platforms interested in syndicating DishRedo's blog content, recipe collections, or other editorial features, please contact our content syndication team. We offer various partnership models to extend the reach of our high-quality culinary content.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>50. General Legal Questions</h3>
+                    <p>
+                        For general legal questions not related to specific infringements or formal notices, such as inquiries about terms of service interpretation or intellectual property rights, you may contact our legal department. Please understand that we cannot provide legal advice specific to your situation.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>51. Sponsorship for Community Events</h3>
+                    <p>
+                        If you are an individual or a small organization looking for sponsorship for a community-based culinary event that aligns with DishRedo's mission, please submit your proposal to our community outreach team. We support initiatives that foster culinary creativity and shared food experiences.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>52. Reporting Technical Vulnerabilities</h3>
+                    <p>
+                        We maintain a responsible disclosure policy for security vulnerabilities. If you are a security researcher and have discovered a potential vulnerability in our systems, please report it privately to our security team through our designated channel to ensure a secure and timely resolution.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>53. Feedback on Website Design</h3>
+                    <p>
+                        We continuously strive to improve the visual design and user experience of DishRedo. If you have specific feedback or suggestions regarding the website's aesthetics, layout, or overall design, please share your thoughts with our design and UX team. Your input helps us create a more engaging platform.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>54. Supplier & Vendor Inquiries</h3>
+                    <p>
+                        For potential suppliers of ingredients, kitchen equipment, or other products that could be featured in our Marketplace or used in our content creation, please contact our procurement team. We are always looking for high-quality, innovative products that align with the DishRedo brand.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>55. Customer Service Escalations</h3>
+                    <p>
+                        If you feel your customer service inquiry has not been adequately addressed through standard channels, you may request an escalation. Please provide your previous ticket number and a summary of the issue to our customer service manager for further review and resolution.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>56. Data Privacy Compliance Questions</h3>
+                    <p>
+                        For detailed questions regarding DishRedo's compliance with specific data protection regulations (e.g., GDPR, CCPA) or industry standards, please direct your inquiry to our Data Protection Officer. We are committed to transparency and adherence to global privacy frameworks.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>57. Event Speaker Opportunities</h3>
+                    <p>
+                        If you are a culinary expert, food blogger, or industry leader interested in speaking at DishRedo's virtual or in-person events, please submit your speaker proposal to our events team. We seek engaging speakers who can inspire and educate our community on various culinary topics.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>58. Accessibility Policy Questions</h3>
+                    <p>
+                        For detailed questions regarding DishRedo's accessibility policy, our commitment to inclusivity, or specific technical aspects of accessibility on our platform, please contact our dedicated accessibility team. We are always working to improve our digital environment for all users.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>59. General Inquiries for Founders/CEO</h3>
+                    <p>
+                        For high-level inquiries directly addressed to the founders or CEO of DishRedo, please submit your message through our general inquiry form, clearly stating the nature of your request. While direct responses are not guaranteed, all messages are reviewed and routed appropriately.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>60. Brand Ambassador Program</h3>
+                    <p>
+                        If you are an influential culinary personality or content creator interested in becoming a DishRedo Brand Ambassador, please contact our marketing and partnerships team. We seek individuals who embody our brand values and can authentically promote our remix-first cooking philosophy.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>61. User Content Removal Requests</h3>
+                    <p>
+                        If you wish to request the removal of specific User Content that you have previously submitted to DishRedo, please contact our community moderation team. Provide clear details about the content you wish to remove, and we will process your request in accordance with our terms and policies.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>62. Technical Integration Support</h3>
+                    <p>
+                        For existing technical partners or developers working on integrations with DishRedo's APIs, please contact our technical support channel specifically designed for developers. This ensures you receive specialized assistance for API usage, data feeds, and integration troubleshooting.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>63. Recipe Submission Feedback</h3>
+                    <p>
+                        If you have submitted a recipe and would like feedback on its status, or have questions about the review process, please contact our content editorial team. We strive to provide constructive feedback and clear communication regarding all user-submitted culinary creations.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>64. Website Performance Feedback</h3>
+                    <p>
+                        Your observations on DishRedo's website performance, such as page loading speeds, responsiveness, or server stability, are valuable. Please share your feedback with our technical operations team, providing details about your experience to help us optimize our infrastructure.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>65. User Experience (UX) Feedback</h3>
+                    <p>
+                        We are constantly refining the user experience of DishRedo. If you have specific feedback on navigation, interface design, or the overall usability of our platform, please contact our UX design team. Your insights help us create a more intuitive and enjoyable culinary journey.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>66. Data Privacy Training Inquiries</h3>
+                    <p>
+                        For organizations or educational institutions interested in learning more about DishRedo's data privacy training programs or seeking insights into our privacy-by-design approach, please contact our Data Protection Officer for potential knowledge-sharing opportunities.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>67. Community Event Organization Support</h3>
+                    <p>
+                        If you are a community organizer planning a culinary event and would like support or resources from DishRedo, such as recipe ideas, promotional assistance, or potential team participation, please contact our community engagement team. We love supporting grassroots food initiatives.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>68. Content Partnership for Blogs/Publications</h3>
+                    <p>
+                        For other blogs, online publications, or media outlets interested in content exchange, guest posting opportunities, or collaborative article series with DishRedo, please contact our content partnerships team. We seek to expand our reach through high-quality culinary collaborations.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>69. General Website Inquiries</h3>
+                    <p>
+                        For any questions about the DishRedo website that don't fit into a specific category, such as general navigation, feature overview, or basic information about our services, please use our general inquiry contact. We're here to guide you through your initial exploration of DishRedo.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>70. Feedback on Recipe Categories</h3>
+                    <p>
+                        We are always looking to expand and refine our recipe categories. If you have suggestions for new categories, ideas for unique culinary themes, or feedback on existing classifications, please share your thoughts with our content strategy team. Your input helps diversify our offerings.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>71. Technical Support for Account Recovery</h3>
+                    <p>
+                        If you are having trouble recovering your DishRedo account, such as forgotten passwords or issues with two-factor authentication, please contact our technical support team specializing in account recovery. We will guide you through the secure process to regain access to your profile.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>72. User Profile Management Questions</h3>
+                    <p>
+                        For detailed questions about managing your user profile, including privacy settings for your public profile, connecting social media accounts, or customizing your culinary interests, please contact our user support team. We help you tailor your DishRedo experience to your preferences.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>73. Feedback on Marketplace Products</h3>
+                    <p>
+                        If you have purchased a product from the DishRedo Marketplace and would like to provide feedback on its quality, usability, or your overall satisfaction, please contact our marketplace operations team. Your feedback helps us curate the best products for our community.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>74. Accessibility Feature Requests</h3>
+                    <p>
+                        If you have specific requests for new accessibility features or improvements that would enhance your experience on DishRedo, please submit them to our accessibility team. We are committed to continuous improvement in making our platform inclusive for everyone.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>75. Partnership for Culinary Events</h3>
+                    <p>
+                        For event organizers planning large-scale culinary festivals, food conferences, or industry trade shows interested in DishRedo's participation or partnership, please contact our strategic partnerships team. We seek opportunities to engage with the broader culinary community.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>76. Reporting Inappropriate Advertisements</h3>
+                    <p>
+                        If you encounter an advertisement on DishRedo that you find inappropriate, misleading, or offensive, please report it to our advertising operations team. Provide details about the ad, and we will review it against our advertising policies to ensure a positive user experience.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>77. Legal Compliance Questions</h3>
+                    <p>
+                        For general questions regarding DishRedo's compliance with various legal regulations (beyond privacy or terms), you may contact our legal department. Please note that specific legal advice cannot be provided for individual situations.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>78. Feedback on Blog Content</h3>
+                    <p>
+                        We welcome your feedback on the articles and topics covered in the DishRedo blog. If you have suggestions for future blog posts, comments on existing content, or ideas for new culinary trends to explore, please share them with our editorial team.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>79. Investor Pitch Requests</h3>
+                    <p>
+                        For accredited investors or venture capital firms interested in a formal investor pitch or detailed business plan for DishRedo, please contact our investor relations department. All requests will be vetted, and confidential information will be shared under appropriate non-disclosure agreements.
+                    </p>
+                </div>
+                <div class="contact-point">
+                    <h3>80. User-Generated Content Copyright Claims</h3>
+                    <p>
+                        If you believe that user-generated content on DishRedo infringes your copyright, please submit a formal DMCA takedown notice to our designated copyright agent. Provide all necessary information as required by law, and we will investigate and take appropriate action.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-black py-8 text-cream-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <h4 class="text-2xl font-bold text-zesty-orange mb-2">DishRedo.</h4>
+                <p class="text-gray-400">Flip the Recipe. Remix the Rules.</p>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-400">
+                    <strong>Address:</strong> 123 Remix Lane, Flavor Town, Culinary State, 90210, USA
+                </p>
+                <p class="text-gray-400">
+                    <strong>Email:</strong> info@dishredo.com | <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Facebook</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Twitter</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Pinterest</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 DishRedo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

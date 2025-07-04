@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishRedo Blog — Flip the Recipe. Remix the Rules.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration for DishRedo Colors */
+        :root {
+            --color-zesty-orange: #FF7043;
+            --color-slate-black: #212121;
+            --color-cream-white: #FAFAFA;
+            --color-basil-green: #81C784;
+            --color-electric-yellow: #FFEB3B;
+        }
+
+        .bg-zesty-orange { background-color: var(--color-zesty-orange); }
+        .text-zesty-orange { color: var(--color-zesty-orange); }
+        .hover\:bg-zesty-orange-dark:hover { background-color: #E65C34; } /* Slightly darker for hover */
+
+        .bg-slate-black { background-color: var(--color-slate-black); }
+        .text-slate-black { color: var(--color-slate-black); }
+
+        .bg-cream-white { background-color: var(--color-cream-white); }
+        .text-cream-white { color: var(--color-cream-white); }
+
+        .bg-basil-green { background-color: var(--color-basil-green); }
+        .text-basil-green { color: var(--color-basil-green); }
+
+        .bg-electric-yellow { background-color: var(--color-electric-yellow); }
+        .text-electric-yellow { color: var(--color-electric-yellow); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-slate-black);
+            color: var(--color-cream-white);
+        }
+
+        /* Custom button styles for DishRedo */
+        .btn-primary {
+            @apply bg-zesty-orange text-cream-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange-dark transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-zesty-orange text-zesty-orange font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange hover:text-cream-white;
+        }
+
+        /* Custom card styles */
+        .card {
+            @apply bg-cream-white text-slate-black p-6 rounded-lg shadow-xl;
+        }
+
+        /* Blog specific card style for text-only posts */
+        .blog-text-card {
+            @apply bg-slate-black text-cream-white p-6 rounded-lg shadow-lg;
+        }
+
+        /* Floating food element animation placeholder (if desired for hero) */
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-slate-black py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-3xl font-extrabold text-zesty-orange">DishRedo<span class="text-cream-white">.</span></a>
+            <nav>
+                <ul class="flex space-x-6">
+                  <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- Blog Hero Section -->
+        <section class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">DishRedo Blog:</span> Your Culinary Compass.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    Stay updated with the latest culinary trends, remix tips, ingredient spotlights, and inspiring stories from the DishRedo community. Dive into our articles for inspiration and insights! We believe that every dish has a story, and every cook has a unique way of telling it. Our blog is a celebration of this culinary creativity, offering a fresh perspective on everyday cooking and beyond.
+                </p>
+                <a href="#featured-posts" class="btn-primary">Explore Latest Posts</a>
+            </div>
+        </section>
+
+        <!-- Featured Blog Posts with Images -->
+        <section id="featured-posts" class="my-16">
+            <h2 class="text-4xl font-bold text-cream-white text-center mb-10">🔥 Featured Reads</h2>
+            <p class="text-lg text-center text-cream-white mb-12">
+                These are our top picks, hand-selected articles that offer deep dives into culinary techniques, innovative recipe ideas, and fascinating food histories. Get ready to be inspired and transform your cooking game!
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="b1.webp" alt="Blog Post Image 1" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-slate-black mb-2">The Art of the Perfect Pizza Remix: Beyond Pepperoni</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        Discover how to elevate your homemade pizzas with unexpected toppings and crust variations that will surprise and delight your taste buds. From gourmet cheese blends and caramelized onions to exotic fruit and spicy sausage combinations, the possibilities are truly endless. Learn about different dough types, sauce bases, and baking techniques to achieve pizzeria-quality results right in your own kitchen. We'll show you how to turn a simple weeknight meal into a culinary masterpiece that reflects your unique flavor preferences.
+                    </p>
+                    <a href="#" class="text-zesty-orange hover:underline text-sm">Read More</a>
+                </div>
+                <div class="card">
+                    <img src="b2.webp" alt="Blog Post Image 2" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-slate-black mb-2">Unlocking Umami: A Deep Dive into the Fifth Taste</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        Explore the mysterious fifth taste, umami, and learn how to intentionally incorporate umami-rich ingredients into your Redos for an explosion of savory flavor. This article delves into the science behind umami, identifying key ingredients like mushrooms, tomatoes, soy sauce, and aged cheeses that naturally enhance this elusive taste. We'll provide practical tips and recipe examples to help you balance and amplify the umami in your dishes, taking your cooking to a whole new level of deliciousness.
+                    </p>
+                    <a href="#" class="text-zesty-orange hover:underline text-sm">Read More</a>
+                </div>
+                <div class="card">
+                    <img src="b3.webp" alt="Blog Post Image 3" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-slate-black mb-2">Street Food Secrets: Recreating Global Delights at Home</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        Our comprehensive guide to mastering popular street food recipes from around the globe, with practical tips for easy home adaptation. From the vibrant flavors of Mexican street tacos to the comforting warmth of Japanese ramen, and the crispy perfection of Korean fried chicken, we break down the essential techniques and ingredients. Learn how to source authentic components or find clever substitutes, ensuring your homemade street food captures the true essence of its origin. Bring the bustling energy of international markets right into your kitchen!
+                    </p>
+                    <a href="#" class="text-zesty-orange hover:underline text-sm">Read More</a>
+                </div>
+                <div class="card">
+                    <img src="b4.webp" alt="Blog Post Image 4" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-slate-black mb-2">The Future of Breakfast: Beyond Cereal and Toast</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        Get creative with your morning meal! We explore innovative breakfast Redos that will energize and delight your taste buds, moving far beyond the traditional. Discover savory oatmeal bowls infused with global spices, deconstructed breakfast burritos, sweet potato hash variations, and even dessert-inspired overnight oats. This article challenges you to rethink breakfast as the most exciting meal of the day, offering nutritious and delicious ways to start your day with a culinary adventure.
+                    </p>
+                    <a href="#" class="text-zesty-orange hover:underline text-sm">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Blog Posts (Text Only) -->
+        <section id="recent-posts" class="my-16">
+            <h2 class="text-4xl font-bold text-cream-white text-center mb-10">More from the DishRedo Blog</h2>
+            <p class="text-lg text-center text-cream-white mb-12">
+                Dive deeper into our archives for a wealth of knowledge, tips, and inspiration. These articles cover a wide range of topics, from quick weeknight meals to advanced flavor pairings, all designed to enhance your culinary skills and ignite your passion for food.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">1. 5 Ways to Remix Your Weeknight Pasta: A Culinary Journey</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Transform ordinary pasta into extraordinary meals with these simple ingredient swaps and flavor additions. Learn how to infuse classic Italian dishes with Asian spices, create creamy vegan sauces, or add unexpected textures with roasted vegetables and crunchy toppings. These quick and delicious ideas will revolutionize your weeknight dinner routine, proving that pasta is the ultimate canvas for culinary creativity.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">2. The Ultimate Guide to One-Pot Wonders: Simplify Your Cooking</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Minimize cleanup and maximize flavor with our top tips for creating delicious one-pot meals that are perfect for busy schedules. This guide covers everything from hearty stews and flavorful rice dishes to complete sheet pan dinners. Discover how to layer ingredients strategically to ensure even cooking and optimal taste, making healthy and satisfying meals a breeze. Say goodbye to piles of dirty dishes and hello to effortless culinary success.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">3. Spice It Up: A Beginner's Guide to Global Spices</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Demystify the world of spices and learn how to use them to add depth and excitement to your everyday cooking. This introductory guide covers essential spices from various cuisines, explaining their flavor profiles and best uses. From the warming notes of cumin and coriander to the fiery kick of cayenne and the aromatic complexity of cardamom, you'll gain the confidence to experiment with new flavors and elevate your dishes with a simple pinch.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">4. Dessert Hacks: No-Bake Treats for Any Occasion</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Indulge your sweet tooth without turning on the oven. Discover a collection of easy no-bake dessert recipes perfect for quick cravings, impromptu gatherings, or simply when you want something sweet without the fuss. From creamy cheesecakes and decadent chocolate mousses to refreshing fruit tarts and layered parfaits, these recipes prove that delicious desserts don't always require baking.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">5. The Power of Broth: Beyond Just Soup</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Learn how a simple broth can be the foundation for incredibly versatile and flavorful meals, extending far beyond just soup. This article explores how to use broths to create rich sauces, tender grains, and aromatic braises. Discover techniques for making your own homemade broths for superior flavor, or how to enhance store-bought versions with aromatics and seasonings. Unlock the full potential of this humble yet powerful ingredient.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">6. Mastering the Art of Deconstruction: Culinary Creativity Unleashed</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Break down classic dishes into their core components and rebuild them with a modern, artistic twist. This article explores the philosophy behind deconstructed cooking, encouraging you to play with textures, temperatures, and presentations. Learn how to reimagine familiar flavors in surprising new forms, turning traditional recipes into innovative culinary experiences that are as visually stunning as they are delicious.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">7. Seasonal Swaps: Cooking with Fresh, Local Ingredients All Year Round</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Embrace seasonal produce with tips on how to adapt your favorite recipes to incorporate fresh, local ingredients throughout the year. This guide helps you understand seasonal availability, offering smart substitutions and creative ways to highlight the natural flavors of fruits and vegetables at their peak. Eating seasonally not only tastes better but also supports local farmers and promotes sustainable cooking practices.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">8. Fusion Flavors: Your Next Culinary Adventure Awaits</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Get inspired by exciting flavor mashups from around the world. This article delves into the art of culinary fusion, showing you how to combine elements from different cuisines to create harmonious and surprising new dishes. From Italian-Japanese pasta to American-Thai wings, discover the principles of successful flavor pairing and embark on your next delicious culinary adventure.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">9. The Minimalist Kitchen: 5 Ingredients, Endless Possibilities</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Learn how to create delicious and satisfying meals with just five core ingredients. This guide proves that minimalist cooking doesn't mean sacrificing flavor or variety. Discover versatile pantry staples and smart cooking techniques that allow you to whip up impressive dishes with minimal fuss, perfect for budget-conscious cooks and busy lifestyles.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">10. Hosting a Redo Party: Fun, Interactive Dining Experiences</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Tips and tricks for throwing a "Redo" themed party where guests can customize their own dishes for a truly interactive culinary experience. From build-your-own taco bars to personalized pizza stations, learn how to set up a fun and engaging environment that encourages creativity and delicious collaboration. Make your next gathering unforgettable with a DishRedo party!
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">11. The Secret to Perfect Sauces: Elevate Your Dishes</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Unlock the secrets to crafting exquisite sauces that can transform any meal. This article covers fundamental sauce-making techniques, from classic French mother sauces to modern, vibrant vinaigrettes. Learn about emulsification, reduction, and how to balance flavors to create sauces that perfectly complement your dishes.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">12. Beyond the Grill: Creative BBQ Redos for Summer</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Take your summer grilling to the next level with innovative BBQ Redos. Explore unexpected marinades, rubs, and serving ideas that go beyond traditional burgers and hot dogs. From grilled fruit desserts to smoked vegetable sides, discover new ways to enjoy outdoor cooking.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">13. The Art of Plating: Make Your Food Look as Good as it Tastes</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Learn professional plating techniques to elevate the visual appeal of your home-cooked meals. This guide covers principles of color, texture, height, and negative space, helping you arrange food beautifully for a truly gourmet presentation.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">14. Sustainable Sips: Crafting Eco-Friendly Beverages</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Discover how to create delicious and refreshing beverages with a focus on sustainability. This article explores recipes for homemade sodas, infused waters, and zero-waste cocktails, using seasonal ingredients and minimizing environmental impact.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+                <div class="blog-text-card">
+                    <h3 class="text-xl font-semibold mb-2">15. Fermentation Fun: A Beginner's Guide to Probiotic Foods</h3>
+                    <p class="text-gray-300 mb-3 text-sm">
+                        Dive into the fascinating world of fermentation and learn how to make your own probiotic-rich foods at home. This beginner-friendly guide covers popular ferments like kimchi, sauerkraut, and kombucha, explaining the health benefits and simple preparation steps.
+                    </p>
+                    <a href="#" class="text-electric-yellow hover:underline text-sm">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-black py-8 text-cream-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <h4 class="text-2xl font-bold text-zesty-orange mb-2">DishRedo.</h4>
+                <p class="text-gray-400">Flip the Recipe. Remix the Rules.</p>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-400">
+                    <strong>Address:</strong> 123 Remix Lane, Flavor Town, Culinary State, 90210, USA
+                </p>
+                <p class="text-gray-400">
+                    <strong>Email:</strong> info@dishredo.com | <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Facebook</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Twitter</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Pinterest</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 DishRedo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

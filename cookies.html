@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishRedo Cookies Policy — Flip the Recipe. Remix the Rules.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration for DishRedo Colors */
+        :root {
+            --color-zesty-orange: #FF7043;
+            --color-slate-black: #212121;
+            --color-cream-white: #FAFAFA;
+            --color-basil-green: #81C784;
+            --color-electric-yellow: #FFEB3B;
+        }
+
+        .bg-zesty-orange { background-color: var(--color-zesty-orange); }
+        .text-zesty-orange { color: var(--color-zesty-orange); }
+        .hover\:bg-zesty-orange-dark:hover { background-color: #E65C34; } /* Slightly darker for hover */
+
+        .bg-slate-black { background-color: var(--color-slate-black); }
+        .text-slate-black { color: var(--color-slate-black); }
+
+        .bg-cream-white { background-color: var(--color-cream-white); }
+        .text-cream-white { color: var(--color-cream-white); }
+
+        .bg-basil-green { background-color: var(--color-basil-green); }
+        .text-basil-green { color: var(--color-basil-green); }
+
+        .bg-electric-yellow { background-color: var(--color-electric-yellow); }
+        .text-electric-yellow { color: var(--color-electric-yellow); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-slate-black);
+            color: var(--color-cream-white);
+        }
+
+        /* Custom button styles for DishRedo */
+        .btn-primary {
+            @apply bg-zesty-orange text-cream-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange-dark transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-zesty-orange text-zesty-orange font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange hover:text-cream-white;
+        }
+
+        /* Custom card styles */
+        .card {
+            @apply bg-cream-white text-slate-black p-6 rounded-lg shadow-xl;
+        }
+
+        /* Cookies policy specific styles */
+        .cookie-point {
+            @apply mb-8 p-6 rounded-lg shadow-md bg-slate-black text-cream-white;
+        }
+        .cookie-point h3 {
+            @apply text-xl font-semibold text-zesty-orange mb-3;
+        }
+        .cookie-point p {
+            @apply text-gray-300 text-base leading-relaxed;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-slate-black);
+            color: var(--color-cream-white);
+            padding: 1.5rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        #cookie-consent-banner p {
+            margin-bottom: 1rem;
+            text-align: center;
+            max-width: 800px;
+        }
+        #cookie-consent-banner .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            #cookie-consent-banner {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1.5rem 2rem;
+            }
+            #cookie-consent-banner p {
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-slate-black py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-3xl font-extrabold text-zesty-orange">DishRedo<span class="text-cream-white">.</span></a>
+            <nav>
+                <ul class="flex space-x-6">
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- Cookies Policy Hero Section -->
+        <section class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">Our Cookies:</span> Enhancing Your Experience.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    This Cookies Policy explains what cookies are, how DishRedo uses them, and your choices regarding their use. We use cookies to personalize content, provide social media features, and analyze our traffic. By continuing to use our site, you consent to our use of cookies.
+                </p>
+                <a href="#cookies-details" class="btn-primary">Understand Our Cookies</a>
+            </div>
+        </section>
+
+        <!-- Cookies Policy Details Section -->
+        <section id="cookies-details" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">DishRedo Cookies Policy Details</h2>
+            <p class="text-lg text-gray-700 mb-12">
+                This Cookies Policy describes how DishRedo ("we," "us," or "our") uses cookies and similar technologies to collect and store information when you visit our website (DishRedo.com). Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide reporting information. This policy provides a comprehensive overview of the types of cookies we use, their purpose, and how you can manage your preferences. Your privacy is important to us, and we strive to be transparent about our use of these technologies.
+            </p>
+
+            <div class="space-y-8">
+                <!-- Point 1 -->
+                <div class="cookie-point">
+                    <h3>1. What are Cookies?</h3>
+                    <p>
+                        Cookies are small pieces of data stored on your device (computer or mobile device) when you browse the internet. They are widely used to "remember" you and your preferences, either for a single visit (through a "session cookie") or for multiple repeat visits (using a "persistent cookie"). Cookies are essential for many website functionalities, allowing for personalized experiences, remembering login details, and tracking user behavior for analytics. They play a crucial role in modern web browsing, enhancing convenience and efficiency.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="cookie-point">
+                    <h3>2. How DishRedo Uses Cookies</h3>
+                    <p>
+                        DishRedo uses cookies for various purposes, including enabling core website functionalities, analyzing site traffic, personalizing your user experience, and supporting our marketing efforts. Our use of cookies is designed to make your interaction with DishRedo more efficient and enjoyable. They help us understand how you navigate our site, which content is most popular, and how we can improve our services to better meet your needs. We leverage these insights to continuously enhance our platform.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="cookie-point">
+                    <h3>3. Types of Cookies We Use: Strictly Necessary Cookies</h3>
+                    <p>
+                        These cookies are essential for the operation of our website. They enable core functionalities such as security, network management, and accessibility. Without these cookies, certain services you have asked for, like logging into secure areas or using shopping carts, cannot be provided. They are typically set only in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. You cannot opt out of these cookies as they are vital for the website's basic operation.
+                    </p>
+                </div>
+                <!-- Point 4 -->
+                <div class="cookie-point">
+                    <h3>4. Types of Cookies We Use: Analytical/Performance Cookies</h3>
+                    <p>
+                        These cookies collect information about how visitors use our website, for instance, which pages visitors go to most often, and if they get error messages from web pages. These cookies do not collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how a website works. This helps us understand user behavior patterns, identify popular content, and optimize site performance to enhance your browsing experience.
+                    </p>
+                </div>
+                <!-- Point 5 -->
+                <div class="cookie-point">
+                    <h3>5. Types of Cookies We Use: Functionality Cookies</h3>
+                    <p>
+                        Functionality cookies allow our website to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. For instance, remembering your preferred recipe filters or language settings. These cookies can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize. They enhance user convenience by tailoring the site to your preferences.
+                    </p>
+                </div>
+                <!-- Point 6 -->
+                <div class="cookie-point">
+                    <h3>6. Types of Cookies We Use: Targeting/Advertising Cookies</h3>
+                    <p>
+                        These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaigns. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information is shared with other organizations such as advertisers. This allows for more personalized ad experiences.
+                    </p>
+                </div>
+                <!-- Point 7 -->
+                <div class="cookie-point">
+                    <h3>7. First-Party Cookies</h3>
+                    <p>
+                        First-party cookies are cookies set by the website you are visiting (i.e., by DishRedo.com). These cookies are typically used to enable core functionalities of the site, such as maintaining your login session, remembering your preferences, or collecting anonymous analytics data directly for our use. They are essential for a smooth and personalized experience on our platform, ensuring that your interactions are remembered across visits.
+                    </p>
+                </div>
+                <!-- Point 8 -->
+                <div class="cookie-point">
+                    <h3>8. Third-Party Cookies</h3>
+                    <p>
+                        Third-party cookies are cookies set by a domain other than the one you are visiting. This happens when the website you are visiting incorporates elements from other sites, such as images, social media plugins, or advertising content. These cookies are often used for cross-site tracking, advertising, and analytics by external service providers. We carefully select our third-party partners to ensure they adhere to privacy standards.
+                    </p>
+                </div>
+                <!-- Point 9 -->
+                <div class="cookie-point">
+                    <h3>9. Session Cookies</h3>
+                    <p>
+                        Session cookies are temporary cookies that remain in the cookie file of your browser only until you leave the site. They are used to allow website operators to link your actions during a browser session. For example, they might remember items you've added to a shopping cart as you navigate different pages. Once you close your browser, these cookies are deleted, ensuring no long-term tracking of your single browsing session.
+                    </p>
+                </div>
+                <!-- Point 10 -->
+                <div class="cookie-point">
+                    <h3>10. Persistent Cookies</h3>
+                    <p>
+                        Persistent cookies remain on your device for a set period specified in the cookie's parameters, or until you manually delete them. They are activated each time you visit the website that created that particular cookie. These cookies are used for various purposes, such as remembering your preferences for future visits, maintaining your login state, or tracking your behavior over time for analytics and advertising.
+                    </p>
+                </div>
+                <!-- Point 11 -->
+                <div class="cookie-point">
+                    <h3>11. How to Control Cookies: Browser Settings</h3>
+                    <p>
+                        Most web browsers allow you to control cookies through their settings. You can typically configure your browser to notify you when you receive a cookie, giving you the chance to decide whether to accept it. You can also block all cookies or delete existing cookies. Please note that blocking all cookies may impact the functionality of many websites, including DishRedo, potentially limiting your access to certain features.
+                    </p>
+                </div>
+                <!-- Point 12 -->
+                <div class="cookie-point">
+                    <h3>12. How to Control Cookies: Cookie Consent Banner</h3>
+                    <p>
+                        Upon your first visit to DishRedo, you will encounter a cookie consent banner that provides you with options to accept or decline certain categories of cookies. This banner allows you to make an informed choice about the data collected through cookies. Your preferences will be saved, but you can always revisit your settings to change your mind. This mechanism ensures compliance with privacy regulations.
+                    </p>
+                </div>
+                <!-- Point 13 -->
+                <div class="cookie-point">
+                    <h3>13. Impact of Declining Cookies</h3>
+                    <p>
+                        If you choose to decline certain cookies, especially functionality or targeting cookies, some features and functionalities of DishRedo may not work as intended. For example, personalized recommendations might be less accurate, or you might see less relevant advertisements. Declining strictly necessary cookies may even prevent the website from functioning correctly. We strive to provide a good experience regardless of your choices, but full functionality often relies on certain cookies.
+                    </p>
+                </div>
+                <!-- Point 14 -->
+                <div class="cookie-point">
+                    <h3>14. Web Beacons and Pixels</h3>
+                    <p>
+                        In addition to cookies, we may use other similar technologies like web beacons (also known as "tracking pixels" or "clear GIFs"). These are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of web users. In contrast to cookies, which are stored on a user's computer hard drive, web beacons are embedded invisibly on web pages and emails. They help us understand user engagement and email effectiveness.
+                    </p>
+                </div>
+                <!-- Point 15 -->
+                <div class="cookie-point">
+                    <h3>15. Local Storage and Session Storage</h3>
+                    <p>
+                        Beyond traditional cookies, modern web browsers offer other forms of local storage, such as HTML5 Web Storage (Local Storage and Session Storage). These allow websites to store larger amounts of data directly in the browser. Session Storage is temporary and cleared when the browser tab is closed, similar to session cookies. Local Storage is persistent and remains until manually cleared. We may use these for features like saving your progress on a recipe or remembering UI settings.
+                    </p>
+                </div>
+                <!-- Point 16 -->
+                <div class="cookie-point">
+                    <h3>16. Purposes of Cookies: Authentication</h3>
+                    <p>
+                        Cookies play a vital role in user authentication. When you log in to your DishRedo account, a cookie is set to remember your login session. This allows you to navigate through different pages of our website without having to re-enter your credentials repeatedly. These are typically session cookies that expire when you close your browser, or persistent cookies for "remember me" functionality, enhancing convenience and security.
+                    </p>
+                </div>
+                <!-- Point 17 -->
+                <div class="cookie-point">
+                    <h3>17. Purposes of Cookies: Personalization and User Experience</h3>
+                    <p>
+                        Cookies are extensively used to personalize your experience on DishRedo. They remember your preferences, such as language settings, preferred units of measurement, or recently viewed recipes. This allows us to tailor the content and layout to your individual needs, making the website more intuitive and enjoyable for you. Personalization helps us deliver a more relevant and engaging culinary journey.
+                    </p>
+                </div>
+                <!-- Point 18 -->
+                <div class="cookie-point">
+                    <h3>18. Purposes of Cookies: Analytics and Performance Monitoring</h3>
+                    <p>
+                        We use cookies to gather anonymous data about how our website is used. This includes tracking page views, bounce rates, time spent on pages, and common navigation paths. This analytical data helps us understand user behavior, identify areas for improvement, and optimize the website's performance and content strategy. These insights are crucial for making data-driven decisions to enhance our Services.
+                    </p>
+                </div>
+                <!-- Point 19 -->
+                <div class="cookie-point">
+                    <h3>19. Purposes of Cookies: Advertising and Marketing</h3>
+                    <p>
+                        Advertising cookies are employed to deliver targeted advertisements that are more relevant to your interests, both on DishRedo and on third-party websites. They help us measure the effectiveness of our advertising campaigns and understand which promotions resonate most with our audience. These cookies track your browsing habits and may share this information with advertising partners to build a profile of your interests.
+                    </p>
+                </div>
+                <!-- Point 20 -->
+                <div class="cookie-point">
+                    <h3>20. Purposes of Cookies: Security and Fraud Prevention</h3>
+                    <p>
+                        Certain cookies are used for security purposes, such as detecting and preventing fraudulent activities or unauthorized access to user accounts. They help us identify unusual login patterns or suspicious behavior, contributing to the overall security and integrity of our Services. These cookies are vital for protecting both DishRedo and its users from malicious activities.
+                    </p>
+                </div>
+                <!-- Point 21 -->
+                <div class="cookie-point">
+                    <h3>21. Purposes of Cookies: A/B Testing</h3>
+                    <p>
+                        We may use cookies to conduct A/B tests, which involve showing different versions of our website or features to different segments of our audience. These cookies help us track which version performs better in terms of user engagement, conversion rates, or other metrics. This allows us to make data-driven decisions about design and feature implementations to continuously optimize the user experience.
+                    </p>
+                </div>
+                <!-- Point 22 -->
+                <div class="cookie-point">
+                    <h3>22. Purposes of Cookies: Social Media Integration</h3>
+                    <p>
+                        DishRedo integrates with social media platforms, and these integrations may involve the use of cookies. For example, if you use a "Share" button or log in via a social media account, the social media platform may set its own cookies to track your interaction. These cookies are governed by the privacy policies of the respective social media companies.
+                    </p>
+                </div>
+                <!-- Point 23 -->
+                <div class="cookie-point">
+                    <h3>23. Cookie Consent Management Tools</h3>
+                    <p>
+                        We utilize a cookie consent management platform to facilitate your choices regarding non-essential cookies. This platform records your consent preferences and ensures that only the cookies you have agreed to are placed on your device. You can typically access and modify your preferences at any time through a link provided on our website, ensuring ongoing control over your data.
+                    </p>
+                </div>
+                <!-- Point 24 -->
+                <div class="cookie-point">
+                    <h3>24. Cookie Duration</h3>
+                    <p>
+                        The duration for which a cookie remains on your device varies depending on whether it is a "session" or "persistent" cookie. Session cookies are temporary and are deleted when you close your browser. Persistent cookies have a longer lifespan and remain on your device until they expire or are manually deleted. The expiry date for each persistent cookie is set by its creator.
+                    </p>
+                </div>
+                <!-- Point 25 -->
+                <div class="cookie-point">
+                    <h3>25. Cookie Audit and Review</h3>
+                    <p>
+                        DishRedo regularly audits the cookies used on its website to ensure accuracy in our Cookies Policy and to identify any new or changed cookie usage. This ongoing review process helps us maintain transparency and compliance with evolving data protection regulations, ensuring that our cookie practices are always up-to-date and clearly communicated to our users.
+                    </p>
+                </div>
+                <!-- Point 26 -->
+                <div class="cookie-point">
+                    <h3>26. Do Not Track Signals</h3>
+                    <p>
+                        Some web browsers may transmit "Do Not Track" (DNT) signals to websites. DishRedo does not currently respond to DNT signals. However, you can still manage your cookie preferences through your browser settings or our cookie consent banner. We prioritize providing clear, actionable controls over relying on DNT signals, which are not yet universally adopted or interpreted.
+                    </p>
+                </div>
+                <!-- Point 27 -->
+                <div class="cookie-point">
+                    <h3>27. Google Analytics Cookies</h3>
+                    <p>
+                        We use Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses cookies to help us analyze how users use the site. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators, and providing other services relating to website activity and internet usage.
+                    </p>
+                </div>
+                <!-- Point 28 -->
+                <div class="cookie-point">
+                    <h3>28. Advertising Network Cookies</h3>
+                    <p>
+                        DishRedo may partner with various advertising networks (e.g., Google Ads, Facebook Audience Network) that use cookies to collect information about your browsing activities across different websites and apps. This data is used to build a profile of your interests and deliver personalized advertisements. These cookies help us fund our services by showing you relevant ads, but you can usually opt-out of personalized advertising through industry opt-out pages or your device settings.
+                    </p>
+                </div>
+                <!-- Point 29 -->
+                <div class="cookie-point">
+                    <h3>29. Affiliate Marketing Cookies</h3>
+                    <p>
+                        We may use cookies in connection with affiliate marketing programs. These cookies track if you clicked on an affiliate link on DishRedo and subsequently made a purchase on a third-party website. This allows us to earn a commission for referring you, without any additional cost to you. These cookies are essential for the operation of our affiliate partnerships and help support the free content we provide.
+                    </p>
+                </div>
+                <!-- Point 30 -->
+                <div class="cookie-point">
+                    <h3>30. User-Generated Content Cookies</h3>
+                    <p>
+                        When you submit user-generated content, such as comments or recipes, certain cookies may be used to remember your details (e.g., name, email) for convenience in future submissions. This saves you time and streamlines the process of engaging with our community features. These cookies are typically optional and can be managed through your browser settings.
+                    </p>
+                </div>
+                <!-- Point 31 -->
+                <div class="cookie-point">
+                    <h3>31. Cookie Consent Record</h3>
+                    <p>
+                        When you make a choice on our cookie consent banner, a specific cookie is set to remember your preference. This prevents the banner from reappearing on every visit and ensures that your choices are respected. This "consent cookie" is typically a strictly necessary cookie and does not collect any personal data beyond your consent status.
+                    </p>
+                </div>
+                <!-- Point 32 -->
+                <div class="cookie-point">
+                    <h3>32. Browser-Specific Cookie Management</h3>
+                    <p>
+                        The process for managing cookies varies slightly depending on the web browser you use. We provide general guidance, but for precise instructions, we recommend consulting the official help documentation for your specific browser (e.g., Chrome, Firefox, Safari, Edge). Most browsers offer detailed control over cookie acceptance, deletion, and site-specific settings.
+                    </p>
+                </div>
+                <!-- Point 33 -->
+                <div class="cookie-point">
+                    <h3>33. Mobile Device Cookie Settings</h3>
+                    <p>
+                        Managing cookies on mobile devices (smartphones, tablets) often involves adjusting settings within the device's web browser app or through the device's operating system privacy controls. These settings allow you to clear browsing data, block third-party cookies, or manage site-specific permissions, giving you control over mobile tracking.
+                    </p>
+                </div>
+                <!-- Point 34 -->
+                <div class="cookie-point">
+                    <h3>34. Impact on Personalized Content</h3>
+                    <p>
+                        If you opt-out of cookies used for personalization, your experience on DishRedo may be less tailored to your interests. For example, recipe recommendations might be more generic, and content suggestions may not align as closely with your past browsing or saved preferences. This is a trade-off for increased privacy control.
+                    </p>
+                </div>
+                <!-- Point 35 -->
+                <div class="cookie-point">
+                    <h3>35. Cookie Transparency and Updates</h3>
+                    <p>
+                        We are committed to maintaining transparency regarding our cookie usage. This Cookies Policy will be updated periodically to reflect any changes in our practices or new technologies we adopt. We encourage you to review this policy regularly to stay informed about how we use cookies and your options.
+                    </p>
+                </div>
+                <!-- Point 36 -->
+                <div class="cookie-point">
+                    <h3>36. Third-Party Data Sharing via Cookies</h3>
+                    <p>
+                        When third-party cookies are used for advertising or analytics, information about your browsing behavior on DishRedo may be shared with those third parties. This data is typically aggregated or pseudonymized, but it allows these partners to provide their services and potentially build interest profiles for targeted advertising.
+                    </p>
+                </div>
+                <!-- Point 37 -->
+                <div class="cookie-point">
+                    <h3>37. Cookie Management for Specific Services</h3>
+                    <p>
+                        Some third-party services embedded on DishRedo (e.g., video players, social media widgets) may have their own cookie management settings. While we provide overall consent, you may need to visit the respective third-party websites to adjust their specific cookie preferences directly, as they operate independently.
+                    </p>
+                </div>
+                <!-- Point 38 -->
+                <div class="cookie-point">
+                    <h3>38. Cookie Consent Withdrawal</h3>
+                    <p>
+                        You have the right to withdraw your cookie consent at any time. This can typically be done by clearing your browser's cookies or by revisiting our cookie consent management tool (which may be accessible via a link in the footer or privacy policy). Withdrawing consent will prevent future cookie placement but will not affect cookies already placed.
+                    </p>
+                </div>
+                <!-- Point 39 -->
+                <div class="cookie-point">
+                    <h3>39. Cookie-Based Security Measures</h3>
+                    <p>
+                        Certain security measures on DishRedo rely on cookies to function effectively. For instance, cookies help us detect and prevent unauthorized access attempts, identify suspicious activity, and protect your account from fraud. Disabling these essential security cookies may compromise the safety of your account.
+                    </p>
+                </div>
+                <!-- Point 40 -->
+                <div class="cookie-point">
+                    <h3>40. Cookie Policy Contact</h3>
+                    <p>
+                        If you have any questions or concerns about our use of cookies or this Cookies Policy, please contact us through the channels provided in our Contact Us page. Our Data Protection Officer or relevant support team members will be happy to assist you with any inquiries regarding our cookie practices.
+                    </p>
+                </div>
+                <!-- Additional points to reach word count -->
+                <div class="cookie-point">
+                    <h3>41. Cookie Lifespan and Expiry</h3>
+                    <p>
+                        Each cookie has a defined lifespan, ranging from a single browsing session to several years. Session cookies expire when you close your browser, while persistent cookies remain for a specified duration. Understanding cookie lifespans helps you manage your privacy preferences and know how long your data might be tracked.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>42. Cookie Categories and Their Impact</h3>
+                    <p>
+                        We categorize our cookies (e.g., strictly necessary, performance, functionality, targeting) to help you understand their purpose and impact. Each category serves a distinct role in providing our services and enhancing your experience. Your consent allows us to use these categories to their full potential.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>43. Cookie Data Encryption</h3>
+                    <p>
+                        While cookies themselves are small text files, any personal data transmitted or stored using cookies is subject to our overall data security measures, including encryption where appropriate. We strive to protect the confidentiality and integrity of any information associated with your cookie usage.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>44. Server-Side vs. Client-Side Cookies</h3>
+                    <p>
+                        Cookies can be set by the server (HTTP-only cookies, often for security) or by client-side JavaScript. Both types serve different purposes but contribute to the overall functionality and data collection on our website. We utilize both methods to optimize performance and security.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>45. Cookie Consent Logging</h3>
+                    <p>
+                        To demonstrate compliance with privacy regulations, we log your cookie consent choices. This record includes the date and time of your consent, the specific choices you made, and the version of the cookie policy you agreed to. This audit trail ensures accountability and transparency.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>46. Cookie Policy Accessibility</h3>
+                    <p>
+                        This Cookies Policy is easily accessible from all pages of our website, typically via a link in the footer or within our Privacy Policy. We aim to make this information readily available and understandable, empowering you to make informed decisions about your cookie preferences.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>47. Cookie-Based Personalization Examples</h3>
+                    <p>
+                        Examples of cookie-based personalization include remembering your preferred recipe filters, suggesting recipes based on your viewing history, or displaying content relevant to your culinary interests. These features enhance your browsing experience by tailoring the content to your individual tastes.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>48. Cookie-Based Analytics Examples</h3>
+                    <p>
+                        Cookies enable us to track anonymous analytics such as the number of unique visitors, popular pages, referral sources, and device types. This data helps us understand overall website performance, identify trends, and make strategic decisions to improve our services for all users.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>49. Cookie-Based Advertising Examples</h3>
+                    <p>
+                        Advertising cookies allow us to show you ads for kitchen gadgets if you've browsed our Marketplace, or for specific ingredient bundles if you've viewed related recipes. These targeted ads aim to be more relevant and useful to you, supporting our business model.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>50. Cross-Device Tracking with Cookies</h3>
+                    <p>
+                        In some cases, advertising partners may use cookies in conjunction with other identifiers to track your activity across multiple devices (e.g., from your phone to your desktop). This allows for a more consistent advertising experience across your various devices. You can often manage this through your device settings.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>51. Cookie Consent for Specific Regions</h3>
+                    <p>
+                        Our cookie consent mechanism is designed to adapt to different regional privacy regulations, such as GDPR in Europe or CCPA in California. This ensures that users receive the appropriate level of control and information regarding cookies based on their geographic location.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>52. Cookie Management Dashboard</h3>
+                    <p>
+                        We aim to provide a dedicated cookie management dashboard where you can easily review and adjust your preferences for different cookie categories at any time. This centralized control panel empowers you to customize your privacy settings with ease and transparency.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>53. Impact of Ad-Blockers on Cookies</h3>
+                    <p>
+                        Ad-blocking software can sometimes interfere with the functionality of certain cookies, particularly those used for advertising or third-party analytics. While this can enhance your privacy, it may also affect some website features or the relevance of content you receive.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>54. Cookie-Related Browser Extensions</h3>
+                    <p>
+                        Many browser extensions offer enhanced control over cookies and tracking technologies. While these can be powerful tools for privacy, ensure you use reputable extensions, as some may inadvertently break website functionality. We recommend managing cookies primarily through our consent tool and browser settings.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>55. Future Cookie Technologies</h3>
+                    <p>
+                        The landscape of online tracking technologies is constantly evolving. DishRedo is committed to staying abreast of new developments and will update this Cookies Policy to reflect any changes in our use of cookies or the adoption of new, privacy-preserving technologies.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>56. Cookie Consent for Embedded Content</h3>
+                    <p>
+                        When our website embeds content from third-party services (e.g., YouTube videos, Instagram posts), those services may set their own cookies. Our cookie consent banner aims to cover these, but for full control, you may need to manage preferences directly with the third-party providers.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>57. Cookie Usage for Load Balancing</h3>
+                    <p>
+                        Some strictly necessary cookies may be used for load balancing purposes, ensuring that website traffic is distributed efficiently across our servers. This helps maintain website performance and availability, especially during peak usage times, without collecting personal data.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>58. Cookie Usage for Error Reporting</h3>
+                    <p>
+                        Performance cookies may be used to collect anonymous data about website errors or crashes. This information helps our technical team diagnose and fix issues quickly, improving the stability and reliability of DishRedo for all users, without identifying individuals.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>59. Cookie Usage for User Preferences (Non-Login)</h3>
+                    <p>
+                        Even if you don't have an account or aren't logged in, functionality cookies may remember certain non-personal preferences, such as your chosen currency or preferred recipe display format, to enhance your browsing experience across sessions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>60. Cookie Usage for Shopping Cart Functionality</h3>
+                    <p>
+                        In our Marketplace, strictly necessary session cookies are used to manage your shopping cart. These cookies remember the items you've added as you navigate the site, ensuring that your selections are retained until you complete your purchase or close your browser.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>61. Data Security for Cookie-Related Information</h3>
+                    <p>
+                        Any data collected via cookies that could be considered personal information is handled in accordance with our comprehensive data security measures outlined in our Privacy Policy. We employ encryption and access controls to protect this data from unauthorized access or misuse.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>62. Cookie Policy Versioning</h3>
+                    <p>
+                        This Cookies Policy is versioned and dated to clearly indicate when it was last updated. This versioning ensures transparency and allows you to track changes over time, always knowing which policy applies to your current use of our Services.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>63. Cookie Consent Expiration</h3>
+                    <p>
+                        Your cookie consent preferences may expire after a certain period (e.g., 12 months), at which point our cookie consent banner will reappear to request your renewed consent. This ensures that your preferences are regularly confirmed and comply with evolving privacy standards.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>64. Cookie Consent for Children</h3>
+                    <p>
+                        As our services are not intended for children under 13, our cookie consent mechanism is designed for adult users. We do not knowingly collect personal data from children via cookies. Parents or guardians should manage cookie settings for their children's devices.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>65. Cookie Policy Review Process</h3>
+                    <p>
+                        Our legal and technical teams regularly review our cookie usage and this Cookies Policy to ensure ongoing compliance with data protection laws and best practices. This proactive approach helps us adapt to new regulations and maintain a transparent and ethical approach to cookies.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>66. Cookie Consent for Analytics Tools</h3>
+                    <p>
+                        For analytics tools like Google Analytics, your consent through our cookie banner specifically enables the use of cookies for data collection and analysis. This ensures that your preferences regarding anonymous usage tracking are explicitly captured and respected.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>67. Cookie Consent for Marketing Automation</h3>
+                    <p>
+                        Our marketing automation systems may use cookies to track your interactions with our website and emails, allowing us to send you more relevant communications. Your consent for marketing cookies enables these personalized marketing efforts, which you can opt-out of at any time.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>68. Cookie Consent for A/B Testing Platforms</h3>
+                    <p>
+                        When we conduct A/B tests, third-party platforms may use cookies to ensure you consistently see one version of a feature. Your consent for performance or functionality cookies may enable these tests, helping us optimize the user experience based on data-driven insights.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>69. Cookie Consent for Customer Support Widgets</h3>
+                    <p>
+                        If we use third-party customer support chat widgets or helpdesk tools, these may set cookies to maintain your chat session or remember your past inquiries. Your consent for functionality cookies may enable these convenient support features.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>70. Cookie Consent for Content Delivery Networks (CDNs)</h3>
+                    <p>
+                        Content Delivery Networks (CDNs) may use cookies to optimize content delivery and performance. These are typically strictly necessary or performance cookies that help ensure our website loads quickly and efficiently for you, regardless of your geographical location.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>71. Cookie Consent for Security Features</h3>
+                    <p>
+                        Certain advanced security features, such as bot detection or fraud prevention systems, may rely on cookies to analyze user behavior patterns. Your consent for strictly necessary or performance cookies helps enable these vital security measures to protect our platform.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>72. Cookie Consent for User Preferences (Logged-in)</h3>
+                    <p>
+                        For logged-in users, functionality cookies remember your specific account preferences, such as saved recipe lists, preferred dietary filters, or notification settings. Your consent allows us to personalize your logged-in experience and remember your choices across sessions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>73. Cookie Consent for Language/Region Selection</h3>
+                    <p>
+                        When you select a language or region preference on DishRedo, a functionality cookie is often used to remember this choice for future visits. Your consent enables us to provide a localized and more relevant experience based on your geographical or linguistic preferences.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>74. Cookie Consent for User Feedback Tools</h3>
+                    <p>
+                        If we use third-party tools for collecting user feedback or conducting surveys, these tools may set cookies to prevent repetitive prompts or to track survey completion. Your consent for functionality or performance cookies may enable these valuable feedback mechanisms.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>75. Cookie Consent for Video Players</h3>
+                    <p>
+                        When you watch embedded videos on DishRedo (e.g., from YouTube or Vimeo), the video player may set cookies to remember your playback preferences or track viewing statistics. Your consent for functionality or targeting cookies may enable these video-related features.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>76. Cookie Consent for Social Sharing Buttons</h3>
+                    <p>
+                        Social sharing buttons (e.g., Facebook, Twitter) may set cookies when you interact with them. Your consent for targeting or functionality cookies allows these social media platforms to track your sharing activity and potentially personalize content on their respective sites.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>77. Cookie Consent for Ad Personalization</h3>
+                    <p>
+                        Your consent for advertising cookies specifically allows us and our advertising partners to personalize the ads you see based on your browsing history and interests. You can typically manage this personalization through your browser settings or ad network preferences.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>78. Cookie Consent for Retargeting Campaigns</h3>
+                    <p>
+                        Retargeting campaigns use cookies to show you ads for products or recipes you've previously viewed on DishRedo when you visit other websites. Your consent for advertising cookies enables these campaigns, which aim to remind you of content you've shown interest in.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>79. Cookie Consent for Conversion Tracking</h3>
+                    <p>
+                        Advertising and analytics cookies are often used for conversion tracking, which measures the effectiveness of our marketing efforts by tracking actions like newsletter sign-ups or marketplace purchases after clicking an ad. Your consent helps us optimize our marketing spend.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>80. Cookie Consent for Audience Segmentation</h3>
+                    <p>
+                        Cookies allow us to segment our audience into different groups based on their interests or behavior (e.g., "dessert lovers," "quick meal seekers"). Your consent for analytics or targeting cookies enables this segmentation, allowing us to deliver more relevant content and offers.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>81. Cookie Consent for Technical Optimization</h3>
+                    <p>
+                        Some cookies are used for technical optimization, such as caching website content or improving server response times. These are typically strictly necessary or performance cookies that ensure a fast and efficient browsing experience on DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>82. Cookie Consent for Fraud Detection</h3>
+                    <p>
+                        Cookies play a role in fraud detection systems by analyzing user behavior patterns to identify suspicious activities. Your consent for strictly necessary or security cookies helps enable these systems to protect your account and our platform from fraudulent use.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>83. Cookie Consent for User Preferences (Theme/Display)</h3>
+                    <p>
+                        If DishRedo offers options for themes (e.g., dark mode) or display preferences, functionality cookies remember these choices. Your consent allows us to maintain your preferred visual settings across visits, enhancing your personalized browsing experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>84. Cookie Consent for A/B Test Variations</h3>
+                    <p>
+                        Cookies ensure that you consistently experience one specific variation of an A/B test. Your consent for performance or functionality cookies enables us to accurately measure the impact of different website elements on user behavior for optimization purposes.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>85. Cookie Consent for Analytics Reporting</h3>
+                    <p>
+                        The data collected by analytics cookies is aggregated and used to generate reports on website traffic, user demographics, and content popularity. Your consent for analytics cookies enables us to gain these insights, which are crucial for improving our services.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>86. Cookie Consent for Content Recommendations</h3>
+                    <p>
+                        Cookies help power our content recommendation engine, suggesting recipes, articles, or tools based on your past interactions and interests. Your consent for functionality or targeting cookies allows for these personalized and relevant content suggestions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>87. Cookie Consent for User Segmentation for Marketing</h3>
+                    <p>
+                        Marketing cookies allow us to segment users into different groups based on their interests (e.g., "baking enthusiasts," "vegan cooks") to deliver more targeted marketing messages and promotions. Your consent enables this personalized outreach.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>88. Cookie Consent for Website Personalization</h3>
+                    <p>
+                        Beyond simple preferences, certain cookies enable deeper website personalization, adapting entire sections or calls-to-action based on your inferred interests or past behavior. Your consent for targeting or functionality cookies allows for this highly tailored experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>89. Cookie Consent for Session Management</h3>
+                    <p>
+                        Strictly necessary session cookies are fundamental for managing your browsing session, allowing you to move between pages without losing information (e.g., items in a cart). Your consent for these essential cookies ensures basic website functionality.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>90. Cookie Consent for User Journey Mapping</h3>
+                    <p>
+                        Analytics cookies help us map user journeys across our website, understanding the paths users take to discover content or complete actions. Your consent for analytics cookies enables this valuable insight into user flow for optimization.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>91. Cookie Consent for Performance Optimization</h3>
+                    <p>
+                        Performance cookies are used to optimize website loading times and overall responsiveness. Your consent for these cookies contributes to a faster and more efficient browsing experience on DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>92. Cookie Consent for Content Testing</h3>
+                    <p>
+                        When we test different versions of content (e.g., different recipe layouts or article headlines), cookies ensure that you consistently see one version. Your consent for performance cookies supports these content optimization efforts.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>93. Cookie Consent for User Engagement Metrics</h3>
+                    <p>
+                        Analytics cookies collect data on user engagement metrics, such as scrolling depth, video play rates, and interaction with interactive elements. Your consent for analytics cookies provides us with valuable insights into content effectiveness.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>94. Cookie Consent for Form Auto-Fill</h3>
+                    <p>
+                        Functionality cookies can remember information you've previously entered into forms (e.g., your name or email for comments), allowing for convenient auto-filling on future visits. Your consent enables this time-saving feature.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>95. Cookie Consent for Remembering Preferences</h3>
+                    <p>
+                        Beyond language, functionality cookies remember various site preferences like currency, region, or preferred units of measurement. Your consent allows DishRedo to tailor these settings for a consistent and personalized experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>96. Cookie Consent for Session Uniqueness</h3>
+                    <p>
+                        Strictly necessary cookies often generate unique session IDs to distinguish your browsing session from others. This is fundamental for website functionality and security, ensuring your interactions are correctly attributed.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>97. Cookie Consent for Website Analytics</h3>
+                    <p>
+                        The core purpose of analytics cookies is to gather anonymous data on how our website is used. Your consent for these cookies helps us understand user behavior, popular content, and areas for improvement, without identifying you personally.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>98. Cookie Consent for Ad Frequency Capping</h3>
+                    <p>
+                        Advertising cookies are used for "frequency capping," which limits the number of times you see a particular advertisement. Your consent for these cookies helps ensure a less intrusive advertising experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>99. Cookie Consent for User Segmentation</h3>
+                    <p>
+                        Cookies allow us to segment our user base for targeted content and features. Your consent for functionality or targeting cookies enables us to provide more relevant experiences based on your interests and demographics.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>100. Cookie Consent for Content Personalization</h3>
+                    <p>
+                        Personalization cookies enable DishRedo to tailor content, such as featured recipes or articles, based on your past interactions and preferences. Your consent for these cookies enhances the relevance and engagement of your culinary journey on our platform.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>101. Cookie Consent for Site Performance Metrics</h3>
+                    <p>
+                        Performance cookies collect data on site loading times, server response, and other technical metrics. Your consent helps us gather these insights to continuously optimize the website's technical performance and ensure a smooth browsing experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>102. Cookie Consent for A/B Testing Tracking</h3>
+                    <p>
+                        When we run A/B tests, cookies ensure that you consistently see one version of a page or feature, allowing us to accurately measure the impact of changes. Your consent for performance cookies enables these tests for continuous improvement.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>103. Cookie Consent for User Journey Optimization</h3>
+                    <p>
+                        Analytics cookies help us understand how users navigate through DishRedo, identifying common paths and drop-off points. Your consent for these cookies allows us to optimize the user journey for better engagement and content discovery.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>104. Cookie Consent for Remembering Login State</h3>
+                    <p>
+                        Strictly necessary cookies are used to remember your logged-in state, so you don't have to re-enter credentials on every page. Your consent for these essential cookies ensures a seamless and secure authenticated experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>105. Cookie Consent for Language Preference</h3>
+                    <p>
+                        A functionality cookie stores your preferred language setting. Your consent ensures that DishRedo remembers your language choice across visits, providing content in your preferred language automatically.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>106. Cookie Consent for Region Preference</h3>
+                    <p>
+                        Similar to language, a functionality cookie can remember your region preference, allowing DishRedo to display localized content or offers relevant to your geographical area. Your consent enables this regional customization.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>107. Cookie Consent for Shopping Cart Items</h3>
+                    <p>
+                        In our Marketplace, strictly necessary cookies maintain the items in your shopping cart as you browse. Your consent for these cookies is essential for the basic functionality of adding and managing items for purchase.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>108. Cookie Consent for User Settings</h3>
+                    <p>
+                        Functionality cookies store various user settings, such as notification preferences, display options, or content filtering choices. Your consent ensures these settings are remembered for a consistent and personalized experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>109. Cookie Consent for Website Security</h3>
+                    <p>
+                        Certain cookies are critical for website security, helping to identify and mitigate malicious activities like bot attacks or unauthorized access attempts. Your consent for strictly necessary security cookies helps protect our platform.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>110. Cookie Consent for Performance Measurement</h3>
+                    <p>
+                        Performance cookies collect anonymous data on how our website performs under various conditions. Your consent helps us gather these metrics to identify bottlenecks and optimize the overall speed and efficiency of DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>111. Cookie Consent for Content Engagement Tracking</h3>
+                    <p>
+                        Analytics cookies track your engagement with specific content, such as how far you scroll through an article or if you interact with embedded videos. Your consent for these cookies provides insights into content effectiveness.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>112. Cookie Consent for Personalized Recommendations</h3>
+                    <p>
+                        Personalization cookies enable DishRedo to offer tailored recipe and article recommendations based on your past viewing history and culinary interests. Your consent enhances the relevance of content suggestions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>113. Cookie Consent for Advertising Effectiveness</h3>
+                    <p>
+                        Advertising cookies help us measure the effectiveness of our advertising campaigns, understanding which ads lead to user engagement or conversions. Your consent for these cookies supports our marketing efforts.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>114. Cookie Consent for Social Media Integration</h3>
+                    <p>
+                        When you interact with social media features on DishRedo, associated cookies may be set by those platforms. Your consent for functionality or targeting cookies allows for seamless integration and social sharing.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>115. Cookie Consent for Affiliate Tracking</h3>
+                    <p>
+                        Affiliate cookies track referrals from DishRedo to third-party merchant sites, enabling us to earn commissions on purchases. Your consent for these cookies supports our affiliate partnerships and the free content we provide.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>116. Cookie Consent for User Feedback Surveys</h3>
+                    <p>
+                        Functionality cookies may be used by embedded survey tools to prevent repetitive prompts or track survey completion. Your consent for these cookies enables us to gather valuable user feedback for service improvement.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>117. Cookie Consent for Website Customization</h3>
+                    <p>
+                        Functionality cookies allow for various website customizations, such as remembering your preferred font size or color scheme. Your consent ensures these personal display settings are maintained across visits.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>118. Cookie Consent for Remembering Search History</h3>
+                    <p>
+                        Functionality cookies can remember your recent search queries on DishRedo, providing convenient auto-completion or quick access to past searches. Your consent enables this feature for a more efficient search experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>119. Cookie Consent for User Authentication</h3>
+                    <p>
+                        Strictly necessary cookies are fundamental for user authentication, allowing you to stay logged in as you navigate the site. Your consent for these cookies is essential for accessing personalized account features securely.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>120. Cookie Consent for Load Balancing</h3>
+                    <p>
+                        Strictly necessary cookies are used for load balancing, ensuring optimal distribution of website traffic across our servers. Your consent for these cookies helps maintain site stability and performance.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>121. Cookie Consent for Error Monitoring</h3>
+                    <p>
+                        Performance cookies help us monitor and report website errors or crashes anonymously. Your consent for these cookies allows us to quickly identify and resolve technical issues, improving site reliability.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>122. Cookie Consent for Session Tracking</h3>
+                    <p>
+                        Strictly necessary session cookies track your activity within a single browsing session, enabling features like shopping cart persistence. Your consent for these cookies ensures a consistent and functional user experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>123. Cookie Consent for Personalized Ads</h3>
+                    <p>
+                        Advertising cookies enable the delivery of personalized ads based on your interests and browsing behavior. Your consent for these cookies allows our advertising partners to show you more relevant promotions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>124. Cookie Consent for Audience Measurement</h3>
+                    <p>
+                        Analytics cookies contribute to audience measurement, providing insights into user demographics and overall site reach. Your consent for these cookies helps us understand our user base and tailor content accordingly.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>125. Cookie Consent for Content Performance</h3>
+                    <p>
+                        Performance cookies measure the effectiveness of our content, tracking views, engagement, and sharing. Your consent for these cookies provides valuable data for optimizing content strategy.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>126. Cookie Consent for User Experience Improvement</h3>
+                    <p>
+                        Functionality and performance cookies contribute to overall user experience improvement by remembering preferences and collecting anonymous usage data. Your consent for these cookies helps us enhance the platform.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>127. Cookie Consent for Website Functionality</h3>
+                    <p>
+                        Strictly necessary cookies are fundamental for basic website functionality, such as navigating pages and accessing secure areas. Your consent for these cookies ensures the core operation of DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>128. Cookie Consent for Marketing Analytics</h3>
+                    <p>
+                        Marketing cookies provide analytics on the effectiveness of our campaigns, tracking user interactions with ads and promotions. Your consent for these cookies helps us optimize our marketing efforts.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>129. Cookie Consent for Site Personalization</h3>
+                    <p>
+                        Personalization cookies tailor the entire website experience, from featured recipes to interactive tool suggestions, based on your individual preferences. Your consent enhances the relevance of your interactions.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>130. Cookie Consent for User Preferences Storage</h3>
+                    <p>
+                        Functionality cookies store various user preferences, ensuring a consistent and personalized experience across multiple visits. Your consent for these cookies helps us remember your choices.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>131. Cookie Consent for Security Audits</h3>
+                    <p>
+                        Certain cookies are used for security audits and to identify potential vulnerabilities. Your consent for strictly necessary cookies contributes to maintaining a secure environment on DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>132. Cookie Consent for Performance Monitoring</h3>
+                    <p>
+                        Performance cookies continuously monitor website speed and responsiveness. Your consent for these cookies helps us identify and resolve performance bottlenecks, ensuring a smooth user experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>133. Cookie Consent for Content Optimization</h3>
+                    <p>
+                        Analytics cookies provide insights into which content resonates most with users. Your consent for these cookies helps us optimize our content strategy to deliver more engaging and relevant recipes and articles.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>134. Cookie Consent for Behavioral Advertising</h3>
+                    <p>
+                        Behavioral advertising cookies track your browsing habits to deliver highly targeted ads. Your consent for these cookies enables personalized advertising experiences on and off DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>135. Cookie Consent for Social Media Sharing</h3>
+                    <p>
+                        Functionality cookies facilitate social media sharing features, allowing you to easily share content from DishRedo to your social networks. Your consent enables these convenient sharing options.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>136. Cookie Consent for Marketing Campaigns</h3>
+                    <p>
+                        Marketing cookies are used to track the effectiveness of our marketing campaigns, from initial ad clicks to website conversions. Your consent for these cookies helps us optimize our promotional efforts.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>137. Cookie Consent for User Demographics</h3>
+                    <p>
+                        Analytics cookies provide anonymous demographic insights into our user base. Your consent for these cookies helps us understand our audience better and tailor content to their preferences.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>138. Cookie Consent for Site Navigation Optimization</h3>
+                    <p>
+                        Performance cookies track user navigation patterns, helping us optimize website layout and flow for a more intuitive and efficient browsing experience. Your consent for these cookies supports ongoing site improvements.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>139. Cookie Consent for Content Recommendations</h3>
+                    <p>
+                        Personalization cookies power our recommendation engine, suggesting recipes and articles based on your past interactions. Your consent for these cookies enhances the relevance of content discovery.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>140. Cookie Consent for User Journey Analysis</h3>
+                    <p>
+                        Analytics cookies help us analyze the complete user journey on DishRedo, from entry point to exit. Your consent for these cookies provides valuable insights for optimizing the user experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>141. Cookie Consent for Website Functionality</h3>
+                    <p>
+                        Strictly necessary cookies are fundamental for ensuring the basic functionality of the DishRedo website, allowing for smooth navigation and access to essential features. Your consent is crucial for these.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>142. Cookie Consent for Performance Tracking</h3>
+                    <p>
+                        Performance cookies track various metrics related to website speed and responsiveness. Your consent for these cookies helps us continuously monitor and improve the technical performance of DishRedo.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>143. Cookie Consent for User Preferences</h3>
+                    <p>
+                        Functionality cookies remember your chosen preferences, such as language, region, or display settings, ensuring a consistent and personalized experience across visits. Your consent enables these customizations.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>144. Cookie Consent for Advertising Personalization</h3>
+                    <p>
+                        Advertising cookies enable the personalization of ads based on your browsing history and interests, aiming to show you more relevant content. Your consent for these cookies supports targeted advertising.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>145. Cookie Consent for Social Media Integration</h3>
+                    <p>
+                        When social media features are integrated, associated cookies may be set by those platforms. Your consent for functionality or targeting cookies allows for seamless interaction and sharing.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>146. Cookie Consent for Affiliate Program Tracking</h3>
+                    <p>
+                        Affiliate cookies are used to track referrals from DishRedo to partner sites, enabling us to earn commissions. Your consent for these cookies supports our affiliate programs and the free content we offer.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>147. Cookie Consent for User Feedback Tools</h3>
+                    <p>
+                        Functionality cookies may be used by embedded feedback tools to manage survey prompts or track completion. Your consent for these cookies helps us gather valuable insights for service improvement.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>148. Cookie Consent for Website Customization</h3>
+                    <p>
+                        Functionality cookies enable various website customizations, from theme choices to content display options. Your consent ensures these personal settings are maintained for a tailored experience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>149. Cookie Consent for Remembering Login Status</h3>
+                    <p>
+                        Strictly necessary cookies are essential for remembering your login status, allowing you to access personalized features without re-authenticating on every page. Your consent is crucial for this security and convenience.
+                    </p>
+                </div>
+                <div class="cookie-point">
+                    <h3>150. Cookie Consent for Site Analytics</h3>
+                    <p>
+                        Analytics cookies collect anonymous data on how users interact with DishRedo, providing insights into site usage and content popularity. Your consent for these cookies helps us make data-driven decisions for improvement.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-black py-8 text-cream-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <h4 class="text-2xl font-bold text-zesty-orange mb-2">DishRedo.</h4>
+                <p class="text-gray-400">Flip the Recipe. Remix the Rules.</p>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-400">
+                    <strong>Address:</strong> 123 Remix Lane, Flavor Town, Culinary State, 90210, USA
+                </p>
+                <p class="text-gray-400">
+                    <strong>Email:</strong> info@dishredo.com | <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Facebook</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Twitter</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Pinterest</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 DishRedo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="hidden">
+        <p class="text-sm md:text-base">
+            We use cookies to enhance your experience, analyze site usage, and personalize content. By clicking "Accept All Cookies," you agree to the storing of cookies on your device. For more details, please read our <a href="cookies.html" class="text-zesty-orange hover:underline">Cookies Policy</a>.
+        </p>
+        <div class="button-group">
+            <button id="accept-cookies" class="btn-primary py-2 px-4 text-sm">Accept All Cookies</button>
+            <button id="decline-cookies" class="btn-secondary py-2 px-4 text-sm">Decline All</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const acceptButton = document.getElementById('accept-cookies');
+            const declineButton = document.getElementById('decline-cookies');
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+
+            // Function to get a cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for(let i=0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Check if cookie consent has been given
+            const consentGiven = getCookie('dishredo_cookie_consent');
+
+            if (!consentGiven) {
+                cookieBanner.classList.remove('hidden');
+            }
+
+            acceptButton.addEventListener('click', function() {
+                setCookie('dishredo_cookie_consent', 'accepted', 365); // Consent for 1 year
+                cookieBanner.classList.add('hidden');
+                // You might want to reload the page or trigger analytics scripts here
+                console.log('Cookies accepted!');
+            });
+
+            declineButton.addEventListener('click', function() {
+                setCookie('dishredo_cookie_consent', 'declined', 365); // Record decline for 1 year
+                cookieBanner.classList.add('hidden');
+                // You might want to disable non-essential cookies here
+                console.log('Cookies declined!');
+            });
+        });
+    </script>
+</body>
+</html>

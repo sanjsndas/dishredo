@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishRedo — Flip the Recipe. Remix the Rules.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration for DishRedo Colors */
+        :root {
+            --color-zesty-orange: #FF7043;
+            --color-slate-black: #212121;
+            --color-cream-white: #FAFAFA;
+            --color-basil-green: #81C784;
+            --color-electric-yellow: #FFEB3B;
+        }
+
+        .bg-zesty-orange { background-color: var(--color-zesty-orange); }
+        .text-zesty-orange { color: var(--color-zesty-orange); }
+        .hover\:bg-zesty-orange-dark:hover { background-color: #E65C34; } /* Slightly darker for hover */
+
+        .bg-slate-black { background-color: var(--color-slate-black); }
+        .text-slate-black { color: var(--color-slate-black); }
+
+        .bg-cream-white { background-color: var(--color-cream-white); }
+        .text-cream-white { color: var(--color-cream-white); }
+
+        .bg-basil-green { background-color: var(--color-basil-green); }
+        .text-basil-green { color: var(--color-basil-green); }
+
+        .bg-electric-yellow { background-color: var(--color-electric-yellow); }
+        .text-electric-yellow { color: var(--color-electric-yellow); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-slate-black);
+            color: white;
+        }
+
+        /* Custom button styles for DishRedo */
+        .btn-primary {
+            @apply bg-zesty-orange text-cream-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange-dark transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-zesty-orange text-zesty-orange font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-zesty-orange hover:text-cream-white;
+        }
+
+        /* Custom card styles */
+        .card {
+            @apply bg-cream-white text-slate-black p-6 rounded-lg shadow-xl;
+        }
+
+        /* Floating food element animation placeholder */
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsive table for campaigns */
+        .campaign-table th, .campaign-table td {
+            @apply px-4 py-2 text-left;
+        }
+        .campaign-table th {
+            @apply bg-zesty-orange text-cream-white font-semibold;
+        }
+        .campaign-table td {
+            @apply bg-cream-white text-slate-black border-b border-gray-200;
+        }
+        .campaign-table tr:last-child td {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .campaign-table thead {
+                display: none; /* Hide header on small screens */
+            }
+            .campaign-table, .campaign-table tbody, .campaign-table tr, .campaign-table td {
+                display: block;
+                width: 100%;
+            }
+            .campaign-table tr {
+                @apply mb-4 border border-gray-300 rounded-lg;
+            }
+            .campaign-table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            .campaign-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-slate-black py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-3xl font-extrabold text-zesty-orange">DishRedo<span class="text-cream-white">.</span></a>
+            <nav>
+                <ul class="flex space-x-6">
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">Flip the Recipe.</span> Remix the Rules.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    DishRedo is your go-to hub for rethinking, remixing, and redoing dishes — your way. It’s not about rigid recipes, it's about creative freedom, global flavors, and making meals personal, playful, and perfectly yours.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#recipes" class="btn-primary">Start Your Redo</a>
+                    <a href="#mashups" class="btn-secondary">Browse Global Remixes</a>
+                    <button class="btn-secondary">Random Remix</button>
+                </div>
+                <div class="mt-12 text-cream-white">
+                    <h3 class="text-2xl font-semibold mb-4">Redo of the Day!</h3>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                        <div class="w-full md:w-1/3">
+                            <img src="p2.webp" alt="Original Dish" class="rounded-lg shadow-md w-full floating-element">
+                            <p class="mt-2 text-lg font-medium">Classic Lasagna</p>
+                        </div>
+                        <div class="text-4xl text-zesty-orange font-bold">→</div>
+                        <div class="w-full md:w-1/3">
+                            <img src="p3.avif" alt="Redo Dish" class="rounded-lg shadow-md w-full floating-element">
+                            <p class="mt-2 text-lg font-medium">Deconstructed Lasagna Cups</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-lg">
+                        Today's featured Redo transforms a comforting classic into a playful, customizable bite!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why DishRedo Stands Apart -->
+        <section class="my-16 text-center">
+            <h2 class="text-4xl font-bold text-cream-white mb-10">Why DishRedo Stands Apart</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">✨</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Remix-First Philosophy</h3>
+                    <p class="text-gray-700">We believe cooking is about iteration and experimentation, not strict adherence to rules. Every recipe is a starting point for your creativity.</p>
+                </div>
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">🎨</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Bold, Sleek, Visual Design</h3>
+                    <p class="text-gray-700">Experience recipes through a high-contrast, energetic, and visual-first layout that inspires and guides your culinary adventures.</p>
+                </div>
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">🧑‍🍳</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Built-in Community Remix Culture</h3>
+                    <p class="text-gray-700">Share your unique Redos, get feedback, and discover endless variations from a vibrant community of food experimenters.</p>
+                </div>
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">🌍</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Strong Global Influence</h3>
+                    <p class="text-gray-700">Dive into a world of fusion, street food, and playful twists on classic comfort dishes from every corner of the globe.</p>
+                </div>
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">📱</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Interactive & Mobile-First</h3>
+                    <p class="text-gray-700">Our platform is designed for seamless mobile interaction, with tap-to-swap ingredients, visual sliders, and quick sharing features.</p>
+                </div>
+                <div class="card bg-cream-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="text-5xl text-zesty-orange mb-4">💡</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">More Than Just Recipes</h3>
+                    <p class="text-gray-700">DishRedo is an experience, a playground for your palate, offering tools and inspiration far beyond static recipe blogs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unique Recipe Playground -->
+        <section id="recipes" class="my-16">
+            <h2 class="text-4xl font-bold text-cream-white text-center mb-10">Unique Recipe Playground</h2>
+            <p class="text-lg text-center text-cream-white mb-12">
+                Explore our bold, remixable recipe cards, each designed to spark your creativity. With step-by-step visual guides, ingredient swap suggestions, flavor boost tips, and user-submitted Redo versions, you'll never cook the same way twice.
+            </p>
+
+            <!-- Deconstructed Classics -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-zesty-orange mb-6">✔ Deconstructed Classics</h3>
+                <p class="text-cream-white text-lg mb-6">Rebuild iconic dishes your way, breaking them down into their essential components and reassembling them with a fresh perspective. This category encourages you to think outside the traditional mold, offering new textures, presentations, and flavor combinations while honoring the spirit of the original dish. Imagine all your favorite comfort foods, but with a playful, modern twist that makes them exciting all over again.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <img src="p4.avif" alt="Deconstructed Tacos" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Deconstructed Tacos</h4>
+                        <p class="text-gray-700 mb-4">All the vibrant flavors of a taco, served in a customizable bowl or platter. Think crispy tortilla chips, seasoned protein, fresh salsa, creamy avocado, and all your favorite toppings ready for a build-your-own adventure. Perfect for parties or a fun weeknight meal.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p5.avif" alt="Deconstructed Lasagna Cups" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Deconstructed Lasagna Cups</h4>
+                        <p class="text-gray-700 mb-4">Individual portions of cheesy, saucy goodness. Layers of pasta, ricotta, meat sauce, and mozzarella baked in muffin tins for a delightful, easy-to-serve twist on classic lasagna. Great for portion control and less messy than traditional slices.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p6.webp" alt="Sushi Unrolled — Bowl Style" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Sushi Unrolled — Bowl Style</h4>
+                        <p class="text-gray-700 mb-4">All the fresh, vibrant ingredients of sushi, without the rolling. A bed of seasoned rice topped with your choice of raw fish or tofu, avocado, cucumber, seaweed, and a drizzle of spicy mayo. A quick, healthy, and satisfying meal.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p7.avif" alt="Burger Sliders, Pick-Your-Toppings" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Burger Sliders, Pick-Your-Toppings</h4>
+                        <p class="text-gray-700 mb-4">Miniature burgers perfect for sampling various flavor combinations. Offer a spread of gourmet cheeses, caramelized onions, different sauces, and fresh veggies for a fun, interactive dining experience. Ideal for entertaining or a casual family dinner.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One-Pot Redo Meals -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-zesty-orange mb-6">✔ One-Pot Redo Meals</h3>
+                <p class="text-cream-white text-lg mb-6">Streamlined recipes with flexible tweaks, designed for minimal cleanup and maximum flavor. These dishes are perfect for busy weeknights, allowing you to throw everything into a single pot, pan, or baking dish and let the magic happen. The beauty lies in their adaptability – easily swap proteins, vegetables, and spices to create endless variations from a simple base.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <img src="p8.avif" alt="Remixable Stir-Fry Base" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Remixable Stir-Fry Base</h4>
+                        <p class="text-gray-700 mb-4">A versatile foundation for quick and healthy meals. Start with a classic stir-fry sauce and your choice of noodles or rice, then load up with seasonal vegetables and your favorite protein (chicken, beef, tofu, shrimp). Easily adjust the spice level or add a touch of sweetness.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p9.webp" alt="One-Pot Pasta Fusion" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">One-Pot Pasta Fusion</h4>
+                        <p class="text-gray-700 mb-4">Pasta cooked directly in its sauce, absorbing all the delicious flavors. Experiment with different pasta shapes, international spices, and a variety of vegetables and cheeses for a truly unique and easy meal. From Mediterranean to Asian-inspired, the possibilities are endless.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p10.avif" alt="Curry-in-a-Hurry" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Curry-in-a-Hurry</h4>
+                        <p class="text-gray-700 mb-4">Whip up a flavorful curry in minutes with a pre-made paste or a quick blend of spices. Add coconut milk, your choice of protein, and whatever vegetables you have on hand. Serve with rice or naan for a comforting and aromatic meal that feels gourmet.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="p11.webp" alt="Brothy Bowls with Global Twists" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Brothy Bowls with Global Twists</h4>
+                        <p class="text-gray-700 mb-4">Light yet satisfying, these bowls feature a rich broth as their base, customizable with various noodles, vegetables, and proteins. Infuse them with flavors from around the world, from Vietnamese pho-inspired spices to Japanese ramen-style toppings. Perfect for a light dinner or a nourishing lunch.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Street Food Remixes -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-zesty-orange mb-6">✔ Street Food Remixes</h3>
+                <p class="text-cream-white text-lg mb-6">Bring the vibrant energy and incredible flavors of global street food into your kitchen, easily recreated with your personal spin. This category celebrates the dynamic, often messy, and always delicious world of food on the go. Discover how to adapt these iconic bites, adding your unique twist to make them even more exciting and accessible for home cooking.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FFEB3B/212121?text=Loaded+Bao+Buns" alt="Loaded Bao Buns" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Loaded Bao Buns</h4>
+                        <p class="text-gray-700 mb-4">Soft, fluffy steamed buns filled with your choice of savory meats (pork belly, chicken, tofu) and vibrant toppings like pickled vegetables, fresh herbs, and a drizzle of spicy sauce. A perfect canvas for endless flavor combinations, from traditional Asian fillings to fusion creations.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=DIY+Tostada+Towers" alt="DIY Tostada Towers" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">DIY Tostada Towers</h4>
+                        <p class="text-gray-700 mb-4">Crispy corn tortillas piled high with refried beans, seasoned ground meat or veggies, fresh lettuce, cheese, and a dollop of sour cream or guacamole. A fun, interactive meal where everyone can build their perfect tower of flavor and texture.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/81C784/212121?text=Skillet+Gyoza" alt="Skillet Gyoza with Fill-Your-Own Options" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Skillet Gyoza with Fill-Your-Own Options</h4>
+                        <p class="text-gray-700 mb-4">Pan-fried dumplings with a crispy bottom and tender top. Offer a variety of fillings like pork and cabbage, chicken and mushroom, or vegetable and tofu, allowing everyone to customize their gyoza experience. Serve with a tangy dipping sauce.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FFEB3B/212121?text=Meat+Pies" alt="Aussie-Inspired Meat Pies, Quick Style" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Aussie-Inspired Meat Pies, Quick Style</h4>
+                        <p class="text-gray-700 mb-4">Savory individual pies with a rich, flavorful meat filling, topped with flaky pastry. Our quick version uses pre-made pastry and simplified fillings, making this iconic Australian comfort food accessible for a weeknight. Experiment with different meat or veggie fillings.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sweet Dish Redos -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-zesty-orange mb-6">✔ Sweet Dish Redos</h3>
+                <p class="text-cream-white text-lg mb-6">Desserts made remixable, transforming classic sweet treats into customizable delights. This category invites you to play with textures, flavors, and presentations, turning familiar desserts into exciting new experiences. From simple ingredient swaps to complete deconstructions, unleash your inner pastry chef without the fuss.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=Brownie+Remixes" alt="3-Way Brownie Remixes" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">3-Way Brownie Remixes (Chewy, Fudgy, Spiced)</h4>
+                        <p class="text-gray-700 mb-4">Master the art of the perfect brownie with variations that cater to every preference. Learn how to achieve a supremely chewy texture, an intensely fudgy center, or infuse them with warm spices like cinnamon and chili for a surprising kick. Endless mix-in possibilities await!</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/81C784/212121?text=Pancake+Stacks" alt="Pancake Stacks with Global Syrup Twists" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Pancake Stacks with Global Syrup Twists</h4>
+                        <p class="text-gray-700 mb-4">Fluffy pancake stacks elevated with international syrup and topping combinations. Think Japanese matcha syrup, Mexican cajeta (caramel), or a spiced Indian jaggery drizzle. A breakfast classic transformed into a global culinary journey.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FFEB3B/212121?text=Overnight+Oats" alt="Overnight Oats, Dessert-Style" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Overnight Oats, Dessert-Style</h4>
+                        <p class="text-gray-700 mb-4">Healthy and convenient overnight oats transformed into decadent, guilt-free desserts. Layer with fruit compotes, chocolate chips, nut butters, and a sprinkle of spices for a breakfast that feels like a treat, or a treat that feels like breakfast.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=Cheesecake+Cups" alt="No-Bake Cheesecake Cups with Flavor Variants" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">No-Bake Cheesecake Cups with Flavor Variants</h4>
+                        <p class="text-gray-700 mb-4">Creamy, individual cheesecake portions that require no oven. Experiment with different crusts (graham cracker, cookie, pretzel) and flavor infusions for the filling, from classic vanilla to vibrant berry, zesty lemon, or rich chocolate. Easy, elegant, and endlessly adaptable.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Ingredient Redos -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-zesty-orange mb-6">✔ 5-Ingredient Redos</h3>
+                <p class="text-cream-white text-lg mb-6">Minimalist cooking, maximum creativity. This category proves that you don't need a pantry full of ingredients to create incredibly flavorful and satisfying meals. Focus on quality, versatile ingredients and smart techniques to transform simple components into culinary masterpieces with minimal fuss and effort.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/81C784/212121?text=Flatbread+Pizzas" alt="Flatbread Pizzas" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Flatbread Pizzas</h4>
+                        <p class="text-gray-700 mb-4">Quick and customizable personal pizzas using pre-made flatbreads. Choose 5 key ingredients – a sauce, a cheese, a protein, a vegetable, and a herb – to create endless flavor combinations. Perfect for a quick lunch or a fun dinner activity.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FFEB3B/212121?text=Quick+Noodle+Bowls" alt="Quick Noodle Bowls" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Quick Noodle Bowls</h4>
+                        <p class="text-gray-700 mb-4">Satisfying noodle bowls assembled in minutes. Combine instant noodles (or quick-cook rice noodles) with a flavorful broth, a protein, a leafy green, and a dash of chili oil or soy sauce for a comforting and speedy meal.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=Snack+Plate+Combos" alt="Snack Plate Combos" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Snack Plate Combos</h4>
+                        <p class="text-gray-700 mb-4">Elevate your snacking with artfully arranged plates featuring 5 complementary ingredients. Think cheese, crackers, fruit, nuts, and a dip, or hummus, pita, olives, cucumber, and feta. Perfect for quick bites or light entertaining.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/81C784/212121?text=Mason+Jar+Salads" alt="Mason Jar Salads" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h4 class="text-xl font-semibold text-slate-black mb-2">Mason Jar Salads</h4>
+                        <p class="text-gray-700 mb-4">Layered salads in a jar for easy grab-and-go lunches. Start with dressing at the bottom, then hard vegetables, grains/protein, and finally leafy greens at the top. Shake to combine when ready to eat for a fresh, crisp meal.</p>
+                        <button class="btn-primary text-sm">Redo This Dish</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tools -->
+        <section id="tools" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">🛠️ New Interactive Tools</h2>
+            <p class="text-lg text-center text-gray-700 mb-12">
+                Unleash your inner culinary scientist with our cutting-edge interactive tools, designed to make remixing dishes intuitive, fun, and endlessly creative. These features are built directly into your recipe experience, providing real-time suggestions and visual feedback to guide your taste adventures.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl text-electric-yellow mb-4">🔄</div>
+                    <h3 class="text-2xl font-semibold mb-3">Remix Generator — Spin a Wheel for Surprise Swaps</h3>
+                    <p class="text-gray-300 mb-4">Feeling adventurous? Our Remix Generator will suggest unexpected ingredient swaps, cooking methods, or flavor profiles for any dish. Just spin the wheel and let serendipity guide your next culinary creation!</p>
+                    <button class="btn-primary">Try the Remix Generator</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl text-electric-yellow mb-4">🌶️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Flavor Boost Slider — Adjust Levels Visually</h3>
+                    <p class="text-gray-300 mb-4">Take control of your dish's taste profile. Visually adjust spice, richness, tang, sweetness, or umami levels with our intuitive slider. See how ingredient proportions change in real-time to match your desired intensity.</p>
+                    <button class="btn-primary">Adjust Flavors Now</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl text-electric-yellow mb-4">🌐</div>
+                    <h3 class="text-2xl font-semibold mb-3">Global Ingredient Swap Tool — Suggests Substitutes by Cuisine</h3>
+                    <p class="text-gray-300 mb-4">Can't find a specific ingredient? Want to infuse a dish with a different cultural flair? Our smart tool suggests authentic and creative substitutes based on various global cuisines, opening up new flavor horizons.</p>
+                    <button class="btn-primary">Find Swaps</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl text-electric-yellow mb-4">🔖</div>
+                    <h3 class="text-2xl font-semibold mb-3">Save Your Redo Path — Bookmark Personalized Versions</h3>
+                    <p class="text-gray-300 mb-4">Never lose a brilliant culinary improvisation again! Our "Save Your Redo Path" feature allows you to bookmark your personalized versions of recipes, complete with your unique ingredient swaps and adjustments, making it easy to revisit or share.</p>
+                    <button class="btn-primary">Save My Redo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expanded Global Flavor Mashups -->
+        <section id="mashups" class="my-16">
+            <h2 class="text-4xl font-bold text-cream-white text-center mb-10">🌍 Expanded Global Flavor Mashups</h2>
+            <p class="text-lg text-center text-cream-white mb-12">
+                Dare to combine the best of different culinary worlds! Our Global Flavor Mashups category celebrates unexpected yet harmonious pairings, creating dishes that are truly unique and exciting. Prepare your palate for a journey of bold tastes and innovative textures.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=Ramen+Carbonara" alt="Italian-Japanese Fusion" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">Italian-Japanese Fusion: Ramen Carbonara</h4>
+                    <p class="text-gray-700 mb-4">A rich, creamy carbonara sauce coats springy ramen noodles, topped with crispy pancetta or chashu pork, a perfectly runny egg, and a sprinkle of nori. The ultimate comfort food crossover.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/81C784/212121?text=Sushi+Pizza" alt="Sushi Pizza" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">Playful Fusion: Sushi Pizza</h4>
+                    <p class="text-gray-700 mb-4">A crispy rice base topped with fresh sashimi-grade fish, avocado, cucumber, spicy mayo, and a sprinkle of sesame seeds. All the fun of pizza with the fresh flavors of sushi, perfect for sharing.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/FFEB3B/212121?text=Buffalo+Pad+Thai" alt="American-Thai Twist" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">American-Thai Twist: Spicy Buffalo Pad Thai</h4>
+                    <p class="text-gray-700 mb-4">Classic Pad Thai noodles tossed in a tangy, spicy buffalo sauce with tender chicken, crunchy peanuts, and a hint of lime. A bold and unexpected combination that delivers on flavor.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/FF7043/FAFAFA?text=Peanut+BBQ+Wings" alt="Peanut Butter BBQ Wings" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">American-Thai Twist: Peanut Butter BBQ Wings</h4>
+                    <p class="text-gray-700 mb-4">Crispy chicken wings coated in a sticky, savory-sweet sauce blending smoky BBQ flavors with creamy peanut butter and a touch of chili. An irresistible fusion appetizer.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/81C784/212121?text=Vegemite+Popcorn" alt="Australian Comfort Remix" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">Australian Comfort Remix: Vegemite Butter Popcorn</h4>
+                    <p class="text-gray-700 mb-4">A surprisingly addictive snack! Fluffy popcorn tossed with melted butter infused with the iconic savory, umami-rich flavor of Vegemite. A true taste of Australia with a playful twist.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/FFEB3B/212121?text=Tempura+Tacos" alt="Japanese-Mexican Street Bites" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-slate-black mb-2">Japanese-Mexican Street Bites: Tempura Tacos</h4>
+                    <p class="text-gray-700 mb-4">Crispy, light tempura-battered fish or vegetables nestled in warm tortillas, topped with a vibrant slaw and a drizzle of spicy Japanese-inspired crema. A delightful textural and flavor contrast.</p>
+                    <button class="btn-primary text-sm">Explore This Mashup</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Campaigns & Events -->
+        <section class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">🎉 Special Campaigns & Events</h2>
+            <p class="text-lg text-center text-gray-700 mb-12">
+                Join our exciting campaigns and events designed to challenge your culinary skills, inspire new ideas, and connect you with the DishRedo community. Participate in weekly challenges, speed runs, and global explorations!
+            </p>
+            <div class="overflow-x-auto">
+                <table class="w-full campaign-table border-collapse rounded-lg overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th>Campaign Name</th>
+                            <th>Concept</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Campaign Name">Remix the Leftovers</td>
+                            <td data-label="Concept">Daily ideas and creative transformations to turn yesterday's meal into today's star dish. Reduce food waste with delicious results!</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Speed Run Redos</td>
+                            <td data-label="Concept">Challenge yourself with 15-minute recipe transformations. Compete on our leaderboard for the fastest and most delicious quick remixes.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">DishRedo World Tour</td>
+                            <td data-label="Concept">Explore and remix iconic global recipes weekly. Dive deep into the culinary traditions of different countries and give them your unique spin.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Breakfast for Dinner Flip</td>
+                            <td data-label="Concept">Creative spins on classic AM meals for PM dining. Reinvent pancakes, eggs, and more into savory and satisfying dinner options.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">One Ingredient, Many Ways</td>
+                            <td data-label="Concept">Weekly feature showcasing how to creatively redo a star ingredient. Discover surprising versatility and new ways to enjoy your pantry staples.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Challenge the Dish</td>
+                            <td data-label="Concept">Monthly contest where the community reinvents a classic dish with a specific twist. Submit your creations and vote for your favorites!</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Fusion Frenzy</td>
+                            <td data-label="Concept">A bi-weekly event focusing on a new cultural mashup. Learn about the cuisines, then create your own fusion masterpiece.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Plant-Based Power Redos</td>
+                            <td data-label="Concept">Explore innovative ways to remix plant-based dishes, making them flavorful, satisfying, and exciting for everyone.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Campaign Name">Dessert Deconstructed</td>
+                            <td data-label="Concept">A campaign dedicated to breaking down and rebuilding classic desserts into new forms, textures, and flavor combinations.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Mobile-First Interactive Experience -->
+        <section class="my-16">
+            <h2 class="text-4xl font-bold text-cream-white text-center mb-10">📲 More Mobile-First Features</h2>
+            <p class="text-lg text-center text-cream-white mb-12">
+                DishRedo is designed from the ground up for a seamless mobile experience. Our intuitive features make cooking on the go easier and more interactive than ever before.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">👆</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Swipe-Through Recipe Remixes</h3>
+                    <p class="text-gray-700">Effortlessly navigate through different recipe variations and user-submitted remixes with a simple swipe, making discovery quick and engaging.</p>
+                </div>
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">🔄</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Tap-to-Swap Ingredient Suggestions</h3>
+                    <p class="text-gray-700">Tap on any ingredient in a recipe to instantly see smart, real-time suggestions for substitutes or flavor-boosting alternatives.</p>
+                </div>
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">⏱️</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Interactive Timers with Visual Progress</h3>
+                    <p class="text-gray-700">Stay on track with integrated timers that feature engaging visual progress rings, making it easy to manage multiple cooking steps.</p>
+                </div>
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">📸</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Mobile Photo Uploads of Your Redo Results</h3>
+                    <p class="text-gray-700">Share your culinary triumphs directly from your phone! Easily upload photos of your finished Redo dishes to the community gallery.</p>
+                </div>
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">⭐</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Quick Save/Share Features</h3>
+                    <p class="text-gray-700">Instantly save your favorite recipes and remixes to your personal "RedoBook" or share them with friends and family across social platforms.</p>
+                </div>
+                <div class="card">
+                    <div class="text-5xl text-zesty-orange mb-4">🔔</div>
+                    <h3 class="text-2xl font-semibold text-slate-black mb-3">Push Alerts for Challenges & Trending Redos</h3>
+                    <p class="text-gray-700">Never miss out on new challenges, trending remixes, or personalized recommendations with our timely and helpful push notifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DishRedo Marketplace Ideas -->
+        <section id="marketplace" class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">🛒 DishRedo Marketplace Ideas</h2>
+            <p class="text-lg text-center text-gray-700 mb-12">
+                Enhance your DishRedo experience with our curated selection of products designed to inspire your culinary creativity and make remixing even more enjoyable.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/FF7043/FAFAFA?text=Ingredient+Bundle" alt="Ingredient bundles" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">Ingredient Bundles for Remix-Friendly Meals</h3>
+                    <p class="text-gray-300">Curated ingredient kits featuring unique spices, sauces, and fresh produce, perfectly portioned for our featured remixable meals. Simplify your shopping and discover new flavors.</p>
+                    <button class="btn-primary mt-4">Shop Bundles</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/81C784/212121?text=Kitchen+Gear" alt="Branded kitchen gear" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">Branded Bold-Color Kitchen Gear</h3>
+                    <p class="text-gray-300">Elevate your kitchen with our exclusive line of high-quality, durable kitchen tools and gadgets, all in DishRedo's signature bold and energetic colors. From spatulas to mixing bowls, cook in style.</p>
+                    <button class="btn-primary mt-4">Browse Gear</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/FFEB3B/212121?text=Spice+Packs" alt="Flavor Addict spice pack collections" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">"Flavor Addict" Spice Pack Collections</h3>
+                    <p class="text-gray-300">Unlock new taste dimensions with our specially curated spice pack collections. Each pack features unique blends and exotic spices designed to add a bold "Redo" twist to any dish. Explore global flavors effortlessly.</p>
+                    <button class="btn-primary mt-4">Get Spices</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/FF7043/FAFAFA?text=Street+Food+Ebook" alt="Street Food Redo Guide" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">Downloadable E-books: Street Food Redo Guide</h3>
+                    <p class="text-gray-300">Dive deeper into the world of street food with our comprehensive e-book. Learn the secrets to recreating authentic street food favorites and discover endless ways to remix them at home.</p>
+                    <button class="btn-primary mt-4">Download Now</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/81C784/212121?text=Minimalist+Ebook" alt="Minimalist Cooking Remix" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">Downloadable E-books: Minimalist Cooking Remix</h3>
+                    <p class="text-gray-300">Master the art of minimalist cooking with this e-book. Discover how to create incredibly flavorful meals using just a few key ingredients, proving that less truly can be more in the kitchen.</p>
+                    <button class="btn-primary mt-4">Download Now</button>
+                </div>
+                <div class="card bg-slate-black text-cream-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x300/FFEB3B/212121?text=Fusion+Ebook" alt="Fusion Flavor Playbook" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold mb-3">Downloadable E-books: Fusion Flavor Playbook</h3>
+                    <p class="text-gray-300">Unlock the secrets to creating harmonious and exciting flavor fusions. This playbook guides you through combining culinary traditions to invent truly unique and delicious dishes.</p>
+                    <button class="btn-primary mt-4">Download Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Satisfaction Section -->
+        <section class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">Customer Satisfaction at DishRedo</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                At DishRedo, your culinary journey and satisfaction are at the heart of everything we do. We are committed to providing an unparalleled experience that empowers you to explore, experiment, and enjoy food in new and exciting ways. Our platform is continuously evolving based on your feedback, ensuring that we meet and exceed your expectations. We believe that true culinary creativity flourishes when you feel supported, inspired, and confident in your kitchen adventures.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                We actively solicit and value your input through various channels, including surveys, direct feedback forms, and community forums. Every suggestion, every comment, and every shared "Redo" helps us refine our tools, expand our recipe categories, and enhance the overall user experience. Our dedicated support team is always ready to assist you with any questions, technical issues, or culinary queries you might have. We strive for prompt, helpful, and friendly service, ensuring that your time on DishRedo is always productive and enjoyable.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                Our commitment to your satisfaction extends to the quality and diversity of our content. We rigorously curate and test recipes, ensuring they are not only delicious but also truly "remixable" and adaptable to various dietary needs and preferences. We aim to provide clear, concise instructions and helpful tips that make even complex culinary concepts accessible to everyone, from novice cooks to seasoned food enthusiasts. The interactive tools are designed with user-friendliness in mind, allowing for seamless experimentation without frustration.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                Furthermore, we foster a positive and encouraging community environment where sharing, learning, and mutual inspiration thrive. We believe that the joy of cooking is amplified when shared, and our community features are built to facilitate this connection. We regularly highlight user-submitted Redos, run engaging contests, and create campaigns that celebrate the diverse culinary talents of our users. Your success in the kitchen is our greatest reward, and we are dedicated to providing all the resources and support you need to achieve it.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                Should you ever feel that your experience falls short of your expectations, please do not hesitate to reach out. Your feedback is crucial for our continuous improvement. We are here to listen, to learn, and to ensure that DishRedo remains your favorite destination for culinary innovation and joy. Thank you for being a part of the DishRedo family – we look forward to seeing what incredible dishes you'll remix next!
+            </p>
+            <p class="text-lg text-gray-700">
+                This section serves as a placeholder to represent the depth of content you requested for customer satisfaction. In a live application, this would be expanded with specific policies, testimonials, and detailed support contact information.
+            </p>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="my-16 bg-cream-white text-slate-black rounded-xl p-12 shadow-2xl">
+            <h2 class="text-4xl font-bold text-slate-black text-center mb-10">Disclaimer for DishRedo</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Welcome to DishRedo! Please read this disclaimer carefully before using our website and services. By accessing or using DishRedo.com (the "Website"), you agree to be bound by the terms and conditions set forth in this disclaimer. If you do not agree with any part of this disclaimer, you must not use our Website.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">1. General Information Only</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                The content provided on DishRedo is for general informational and entertainment purposes only. It is not intended to be a substitute for professional culinary advice, nutritional guidance, or medical consultation. While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the Website or the information, products, services, or related graphics contained on the Website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">2. Recipe Accuracy and Results</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                Recipes and "Redos" presented on DishRedo are developed and shared by our team and community members. Cooking results can vary significantly based on factors such as ingredient quality, freshness, specific brands used, cooking equipment, individual skill level, and environmental conditions. We do not guarantee that following any recipe or "Redo" on this Website will produce the exact results depicted or desired. We encourage users to exercise their own judgment and adapt recipes as necessary.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">3. Allergens and Dietary Restrictions</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                DishRedo recipes may contain common allergens such as nuts, dairy, gluten, soy, eggs, and shellfish. While some recipes may be labeled as "gluten-free," "dairy-free," "vegan," etc., we cannot guarantee the complete absence of cross-contamination in ingredients or during preparation. It is the user's sole responsibility to verify all ingredients, read labels, and take necessary precautions to avoid allergic reactions or to adhere to specific dietary requirements. If you have allergies or dietary restrictions, please consult with a healthcare professional or registered dietitian before preparing or consuming any food based on information from this Website.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">4. Food Safety and Hygiene</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                Users are solely responsible for practicing safe food handling, storage, and cooking temperatures to prevent foodborne illnesses. Always ensure that ingredients are fresh and properly stored, and that all cooking surfaces and utensils are clean. Cook meats, poultry, and seafood to their recommended internal temperatures. DishRedo is not responsible for any adverse effects that may result from improper food preparation or consumption.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">5. External Links</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                Our Website may contain links to external websites that are not provided or maintained by or in any way affiliated with DishRedo. Please note that DishRedo does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. We have no control over the nature, content, and availability of those sites.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">6. User-Generated Content</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                DishRedo encourages users to share their "Redos," photos, and comments. While we strive to moderate content, we are not responsible for the accuracy, completeness, or legality of user-generated content. Users are solely responsible for the content they submit and must ensure it complies with our terms of service and community guidelines. We reserve the right to remove any content deemed inappropriate or in violation of our policies.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">7. Limitation of Liability</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                In no event will DishRedo, its owners, employees, or affiliates be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this Website. This includes, but is not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of any content (or product) posted, transmitted, or otherwise made available via the Website, even if advised of their possibility.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">8. Changes to Disclaimer</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                DishRedo reserves the right to amend this disclaimer at any time without prior notice. By continuing to use the Website after any such changes, you accept the modified disclaimer. It is your responsibility to review this disclaimer periodically for updates.
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-black mb-4">9. Copyright and Intellectual Property</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                All content on this Website, including text, graphics, logos, images, and software, is the property of DishRedo or its content suppliers and protected by international copyright laws. Unauthorized reproduction or distribution of any content from this Website is strictly prohibited.
+            </p>
+            <p class="text-lg text-gray-700">
+                This disclaimer provides a comprehensive overview of important legal considerations. For a live website, this would be expanded to meet specific legal requirements and cover all aspects of user interaction and content usage. This section serves as a placeholder to represent the depth of content you requested for the disclaimer.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-black py-8 text-cream-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <h4 class="text-2xl font-bold text-zesty-orange mb-2">DishRedo.</h4>
+                <p class="text-gray-400">Flip the Recipe. Remix the Rules.</p>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-400">
+                    <strong>Address:</strong> 123 Remix Lane, Flavor Town, Culinary State, 90210, USA
+                </p>
+                <p class="text-gray-400">
+                    <strong>Email:</strong> info@dishredo.com | <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Facebook</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Twitter</a>
+                <a href="#" class="text-cream-white hover:text-zesty-orange transition-colors duration-200">Pinterest</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 DishRedo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
