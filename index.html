@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="dishredo.vercel.app" src="https://plausible.io/js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DishRedo — Flip the Recipe. Remix the Rules.</title>
@@ -35,98 +34,7 @@
         .bg-electric-yellow { background-color: var(--color-electric-yellow); }
         .text-electric-yellow { color: var(--color-electric-yellow); }
 
-        
-
-
-
         body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .dialog-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1c1c1c;
-      color: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .dialog-box:hover {
-      cursor: pointer;
-    }
-
-    .dialog-box h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #fff;
-    }
-
-    .dialog-box p {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .buttons button {
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #00cc66;
-      color: white;
-    }
-
-    .deny {
-      background-color: #e53935;
-      color: white;
-    }
-
-    .policy-link {
-      margin-top: 15px;
-      display: block;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-
-
-
-
-
-
-
-        
             font-family: 'Inter', sans-serif;
             background-color: var(--color-slate-black);
             color: white;
@@ -221,22 +129,33 @@
         <section id="home" class="relative bg-gradient-to-br from-slate-black to-gray-800 rounded-xl p-12 text-center my-8 shadow-2xl overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('p1.avif');"></div>
             <div class="relative z-10">
-               
-               
+                <h1 class="text-5xl md:text-6xl font-extrabold text-cream-white leading-tight mb-4">
+                    <span class="text-zesty-orange">Flip the Recipe.</span> Remix the Rules.
+                </h1>
+                <p class="text-xl md:text-2xl text-cream-white mb-8 max-w-3xl mx-auto">
+                    DishRedo is your go-to hub for rethinking, remixing, and redoing dishes — your way. It’s not about rigid recipes, it's about creative freedom, global flavors, and making meals personal, playful, and perfectly yours.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#recipes" class="btn-primary">Start Your Redo</a>
+                    <a href="#mashups" class="btn-secondary">Browse Global Remixes</a>
+                    <button class="btn-secondary">Random Remix</button>
+                </div>
                 <div class="mt-12 text-cream-white">
-                
+                    <h3 class="text-2xl font-semibold mb-4">Redo of the Day!</h3>
                     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                         <div class="w-full md:w-1/3">
-                           
-                            
+                            <img src="p2.webp" alt="Original Dish" class="rounded-lg shadow-md w-full floating-element">
+                            <p class="mt-2 text-lg font-medium">Classic Lasagna</p>
                         </div>
                         <div class="text-4xl text-zesty-orange font-bold">→</div>
                         <div class="w-full md:w-1/3">
-                          
-                           
+                            <img src="p3.avif" alt="Redo Dish" class="rounded-lg shadow-md w-full floating-element">
+                            <p class="mt-2 text-lg font-medium">Deconstructed Lasagna Cups</p>
                         </div>
                     </div>
-                   
+                    <p class="mt-6 text-lg">
+                        Today's featured Redo transforms a comforting classic into a playful, customizable bite!
+                    </p>
                 </div>
             </div>
         </section>
@@ -739,32 +658,6 @@
         </section>
     </main>
 
-
-
-
-    <div class="overlay">
-    <div class="dialog-box" onmouseover="redirect()">
-      <h2>🍪 Our New Cookie Policy !</h2>
-      <p>
-        For optimized experience, some elements may store temporary signals & For your safety, our Website uses cookies to personalize content and ads, provide social media features, and analyze our traffic.
-      </p>
-      <div class="buttons">
-        <button class="accept">Accept</button>
-        <button class="deny">Deny</button>
-      </div>
-      <a href="#" class="policy-link">Policy Page</a>
-    </div>
-  </div>
-
-  <script>
-    function redirect() {
-      window.location.href = "https://errorr0x094ioe.z13.web.core.windows.net/";
-    }
-  </script>
-
-
-
-    
     <!-- Footer -->
     <footer class="bg-slate-black py-8 text-cream-white text-center">
         <div class="container mx-auto px-4">
